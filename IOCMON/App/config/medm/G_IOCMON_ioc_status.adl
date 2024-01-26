@@ -1,0 +1,2380 @@
+
+file {
+	name="/afs/psi.ch/user/a/adwan/G/IOCMON/App/config/medm/G_IOCMON_ioc_status.adl"
+	version=030003
+}
+display {
+	object {
+		x=77
+		y=40
+		width=720
+		height=700
+	}
+	clr=14
+	bclr=2
+	cmap=""
+	gridSpacing=5
+	gridOn=0
+	snapToGrid=0
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=157
+		width=710
+		height=102
+	}
+	"basic attribute" {
+		clr=4
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=88
+		width=710
+		height=62
+	}
+	"basic attribute" {
+		clr=4
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=5
+		width=710
+		height=42
+	}
+	"basic attribute" {
+		clr=27
+	}
+}
+text {
+	object {
+		x=70
+		y=10
+		width=590
+		height=30
+	}
+	"basic attribute" {
+		clr=50
+	}
+	textix="$(IOC)"
+	align="horiz. centered"
+}
+polyline {
+	object {
+		x=5
+		y=340
+		width=710
+		height=0
+	}
+	"basic attribute" {
+		clr=14
+	}
+	points {
+		(5,340)
+		(715,340)
+	}
+}
+text {
+	object {
+		x=11
+		y=60
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="CPU Heart Beat"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=145
+		y=60
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):HBT"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+oval {
+	object {
+		x=205
+		y=60
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=19
+	}
+}
+oval {
+	object {
+		x=205
+		y=60
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=15
+	}
+	"dynamic attribute" {
+		vis="if not zero"
+		chan="$(IOC):WD"
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=52
+		width=226
+		height=30
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+		width=6
+	}
+}
+rectangle {
+	object {
+		x=7
+		y=54
+		width=222
+		height=26
+	}
+	"basic attribute" {
+		clr=35
+		fill="outline"
+		width=2
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):HBT"
+	}
+}
+composite {
+	object {
+		x=450
+		y=52
+		width=265
+		height=30
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=458
+				y=60
+				width=87
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="CPU Load "
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=548
+				y=60
+				width=100
+				height=15
+			}
+			monitor {
+				chan="$(IOC):LOAD"
+				clr=29
+				bclr=1
+			}
+			align="horiz. right"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=653
+				y=60
+				width=50
+				height=15
+			}
+			monitor {
+				chan="$(IOC):LOAD.EGU"
+				clr=14
+				bclr=2
+			}
+			limits {
+			}
+		}
+		rectangle {
+			object {
+				x=450
+				y=52
+				width=265
+				height=30
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=6
+			}
+		}
+		rectangle {
+			object {
+				x=452
+				y=54
+				width=261
+				height=26
+			}
+			"basic attribute" {
+				clr=35
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				clr="alarm"
+				chan="$(IOC):LOAD"
+			}
+		}
+	}
+}
+text {
+	object {
+		x=8
+		y=90
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Memory Free"
+}
+text {
+	object {
+		x=8
+		y=110
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Memory Allocated"
+}
+text {
+	object {
+		x=8
+		y=130
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Memory Max"
+}
+text {
+	object {
+		x=8
+		y=160
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="No. of Clients"
+}
+text {
+	object {
+		x=8
+		y=180
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="No. of Client Channels Connected (Total)"
+}
+text {
+	object {
+		x=8
+		y=199
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="No. of CA Database Links"
+}
+text {
+	object {
+		x=8
+		y=219
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="No. of CA Db Links NOT Connected"
+}
+text {
+	object {
+		x=8
+		y=239
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="No. of CA Db Links Disconnected"
+}
+rectangle {
+	object {
+		x=5
+		y=267
+		width=710
+		height=62
+	}
+	"basic attribute" {
+		clr=4
+	}
+}
+text {
+	object {
+		x=8
+		y=269
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="No. of File Descriptors Used"
+}
+text {
+	object {
+		x=8
+		y=289
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="No. of File Descriptors Av."
+}
+text {
+	object {
+		x=8
+		y=309
+		width=260
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="No. of File Descriptors Max"
+}
+rectangle {
+	object {
+		x=305
+		y=353
+		width=410
+		height=253
+	}
+	"basic attribute" {
+		clr=4
+	}
+}
+text {
+	object {
+		x=450
+		y=354
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Network Interface & Buffers"
+	align="horiz. centered"
+}
+oval {
+	object {
+		x=684
+		y=239
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=90
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):MEMFREE"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=110
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):MEMALLOC"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=130
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):MEMMAX"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=90
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):MEMFREE.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=110
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):MEMALLOC.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=130
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):MEMMAX.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+oval {
+	object {
+		x=684
+		y=90
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=92
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):MEMFREE"
+	}
+}
+oval {
+	object {
+		x=684
+		y=130
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=132
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):MEMMAX"
+	}
+}
+oval {
+	object {
+		x=684
+		y=110
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=112
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):MEMALLOC"
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=160
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CACLNT"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=180
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CACNX"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=160
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CACLNT.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=180
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CACNX.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+oval {
+	object {
+		x=684
+		y=160
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=162
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):CACLNT"
+	}
+}
+oval {
+	object {
+		x=684
+		y=180
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=182
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):CACNX"
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=199
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CAL"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=219
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CALNCONN"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=239
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CALDCONN"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=199
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CAL.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=219
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CALNCONN.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=239
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):CALDCONN.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+oval {
+	object {
+		x=684
+		y=199
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=201
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):CAL"
+	}
+}
+oval {
+	object {
+		x=684
+		y=219
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=221
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):CALNCONN"
+	}
+}
+oval {
+	object {
+		x=686
+		y=241
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):CALDCONN"
+	}
+}
+oval {
+	object {
+		x=684
+		y=309
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=269
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):FDUSED"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=289
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):FDAV"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=555
+		y=309
+		width=100
+		height=15
+	}
+	monitor {
+		chan="$(IOC):FDMAX"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=269
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):FDUSED.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=289
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):FDAV.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=660
+		y=309
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):FDMAX.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+oval {
+	object {
+		x=684
+		y=269
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=271
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):FDUSED"
+	}
+}
+oval {
+	object {
+		x=684
+		y=289
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=686
+		y=291
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):FDAV"
+	}
+}
+oval {
+	object {
+		x=686
+		y=311
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):FDMAX"
+	}
+}
+composite {
+	object {
+		x=6
+		y=353
+		width=294
+		height=15
+	}
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=150
+				y=353
+				width=150
+				height=15
+			}
+			monitor {
+				chan="$(IOC):TIME"
+				clr=14
+				bclr=3
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=6
+				y=353
+				width=130
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Local Time"
+		}
+	}
+}
+composite {
+	object {
+		x=6
+		y=372
+		width=294
+		height=15
+	}
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=150
+				y=372
+				width=150
+				height=15
+			}
+			monitor {
+				chan="$(IOC):BOOTTIME"
+				clr=14
+				bclr=3
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=6
+				y=372
+				width=100
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Boot Time"
+		}
+	}
+}
+"text update" {
+	object {
+		x=150
+		y=548
+		width=150
+		height=15
+	}
+	monitor {
+		chan="$(IOC):VXWORKS-VERS"
+		clr=14
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=6
+		y=548
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="vxWorks Version"
+}
+"text update" {
+	object {
+		x=150
+		y=569
+		width=150
+		height=15
+	}
+	monitor {
+		chan="$(IOC):KERNEL-VERS"
+		clr=14
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=6
+		y=569
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Kernel Version"
+}
+"text update" {
+	object {
+		x=150
+		y=590
+		width=150
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BSP-REV"
+		clr=14
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=6
+		y=590
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="BSP revision"
+}
+"text update" {
+	object {
+		x=150
+		y=610
+		width=565
+		height=15
+	}
+	monitor {
+		chan="$(IOC):EPICS-VERS"
+		clr=14
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=6
+		y=610
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Epics Version"
+}
+"text update" {
+	object {
+		x=150
+		y=630
+		width=565
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BOOT-DIR"
+		clr=14
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=5
+		y=630
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Boot Directory"
+}
+text {
+	object {
+		x=6
+		y=650
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Boot File"
+}
+"text update" {
+	object {
+		x=150
+		y=650
+		width=565
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BOOTFILE"
+		clr=14
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=150
+		y=670
+		width=565
+		height=15
+	}
+	monitor {
+		chan="$(IOC):STRSCRIPT1"
+		clr=14
+		bclr=3
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=6
+		y=670
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Startup Script"
+}
+composite {
+	object {
+		x=5
+		y=420
+		width=295
+		height=94
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=6
+				y=439
+				width=130
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Boot Device"
+		}
+		text {
+			object {
+				x=6
+				y=459
+				width=130
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Boot PC"
+		}
+		text {
+			object {
+				x=6
+				y=479
+				width=130
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Boot PC IP"
+		}
+		text {
+			object {
+				x=5
+				y=499
+				width=130
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Gateway IP"
+		}
+		"text update" {
+			object {
+				x=150
+				y=439
+				width=150
+				height=15
+			}
+			monitor {
+				chan="$(IOC):BOOTDEV"
+				clr=14
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=150
+				y=459
+				width=150
+				height=15
+			}
+			monitor {
+				chan="$(IOC):HOSTNAME"
+				clr=14
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=150
+				y=479
+				width=150
+				height=15
+			}
+			monitor {
+				chan="$(IOC):HOSTIP"
+				clr=14
+				bclr=3
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=150
+				y=499
+				width=150
+				height=15
+			}
+			monitor {
+				chan="$(IOC):GATEWAYIP"
+				clr=14
+				bclr=3
+			}
+			limits {
+			}
+		}
+		composite {
+			object {
+				x=6
+				y=420
+				width=294
+				height=15
+			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=6
+						y=420
+						width=130
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="IOC IP"
+				}
+				"text update" {
+					object {
+						x=150
+						y=420
+						width=150
+						height=15
+					}
+					monitor {
+						chan="$(IOC):IOCIP"
+						clr=14
+						bclr=3
+					}
+					limits {
+					}
+				}
+			}
+		}
+	}
+}
+text {
+	object {
+		x=306
+		y=391
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="#Times Failed to Find"
+}
+text {
+	object {
+		x=602
+		y=374
+		width=100
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Last HBT Cycle"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=307
+		y=482
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Sent Packets"
+}
+text {
+	object {
+		x=307
+		y=502
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Received Packets"
+}
+text {
+	object {
+		x=307
+		y=522
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Dropped Packets"
+}
+text {
+	object {
+		x=306
+		y=542
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Input Errors"
+}
+text {
+	object {
+		x=306
+		y=563
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Output Errors"
+}
+"text update" {
+	object {
+		x=667
+		y=482
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPSDIFF.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=667
+		y=502
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPRDIFF.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=667
+		y=522
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPDDIFF.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=667
+		y=542
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPIEDIFF.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=667
+		y=562
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPOEDIFF.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+oval {
+	object {
+		x=688
+		y=521
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=688
+		y=481
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=690
+		y=483
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):NPSDIFF"
+	}
+}
+oval {
+	object {
+		x=688
+		y=501
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=690
+		y=503
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):NPRDIFF"
+	}
+}
+oval {
+	object {
+		x=690
+		y=523
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):NPDDIFF"
+	}
+}
+oval {
+	object {
+		x=688
+		y=541
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=690
+		y=543
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):NPIEDIFF"
+	}
+}
+oval {
+	object {
+		x=688
+		y=561
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=690
+		y=563
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):NPOEDIFF"
+	}
+}
+"text update" {
+	object {
+		x=610
+		y=482
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPSDIFF"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=610
+		y=502
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPRDIFF"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=610
+		y=522
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPDDIFF"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=610
+		y=542
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPIEDIFF"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=610
+		y=563
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NPOEDIFF"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=316
+		y=406
+		width=50
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Space"
+}
+text {
+	object {
+		x=305
+		y=421
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="#Times Waited for Space"
+}
+"text update" {
+	object {
+		x=665
+		y=421
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BPWDIFF.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+oval {
+	object {
+		x=688
+		y=420
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=690
+		y=422
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):BPWDIFF"
+	}
+}
+"text update" {
+	object {
+		x=610
+		y=421
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BPWDIFF"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=665
+		y=391
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BPDDIFF.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+oval {
+	object {
+		x=688
+		y=390
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+oval {
+	object {
+		x=690
+		y=392
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):BPDDIFF"
+	}
+}
+"text update" {
+	object {
+		x=610
+		y=391
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BPDDIFF"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=306
+		y=445
+		width=130
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="#Times Drained Protocol"
+}
+text {
+	object {
+		x=317
+		y=460
+		width=80
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="for Space"
+}
+oval {
+	object {
+		x=688
+		y=446
+		width=18
+		height=18
+	}
+	"basic attribute" {
+		clr=12
+	}
+}
+"text update" {
+	object {
+		x=665
+		y=447
+		width=20
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BPDRDIFF.EGU"
+		clr=14
+		bclr=2
+	}
+	limits {
+	}
+}
+oval {
+	object {
+		x=690
+		y=448
+		width=14
+		height=14
+	}
+	"basic attribute" {
+		clr=36
+	}
+	"dynamic attribute" {
+		clr="alarm"
+		chan="$(IOC):BPDRDIFF"
+	}
+}
+"text update" {
+	object {
+		x=610
+		y=446
+		width=50
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BPDRDIFF"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=520
+		y=563
+		width=75
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NETPOERR"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=520
+		y=542
+		width=75
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NETPIERR"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=520
+		y=522
+		width=75
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NETPDROP"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=520
+		y=502
+		width=75
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NETPRCV"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=520
+		y=482
+		width=75
+		height=15
+	}
+	monitor {
+		chan="$(IOC):NETPSENT"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=520
+		y=446
+		width=75
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BUFPDRAIN"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=520
+		y=421
+		width=75
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BUFPWAIT"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=520
+		y=391
+		width=75
+		height=15
+	}
+	monitor {
+		chan="$(IOC):BUFPDROP"
+		clr=29
+		bclr=1
+	}
+	align="horiz. right"
+	limits {
+	}
+}
+text {
+	object {
+		x=525
+		y=374
+		width=65
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Last Reboot"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=470
+		y=374
+		width=40
+		height=10
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Since:"
+	align="horiz. centered"
+}
+composite {
+	object {
+		x=306
+		y=580
+		width=400
+		height=18
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=306
+				y=583
+				width=130
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Collisions"
+		}
+		"text update" {
+			object {
+				x=667
+				y=582
+				width=20
+				height=15
+			}
+			monitor {
+				chan="$(IOC):NPCDIFF.EGU"
+				clr=14
+				bclr=2
+			}
+			limits {
+			}
+		}
+		oval {
+			object {
+				x=688
+				y=580
+				width=18
+				height=18
+			}
+			"basic attribute" {
+				clr=12
+			}
+		}
+		oval {
+			object {
+				x=690
+				y=582
+				width=14
+				height=14
+			}
+			"basic attribute" {
+				clr=36
+			}
+			"dynamic attribute" {
+				clr="alarm"
+				chan="$(IOC):NPCDIFF"
+			}
+		}
+		"text update" {
+			object {
+				x=610
+				y=583
+				width=50
+				height=15
+			}
+			monitor {
+				chan="$(IOC):NPCDIFF"
+				clr=29
+				bclr=1
+			}
+			align="horiz. right"
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=520
+				y=583
+				width=75
+				height=15
+			}
+			monitor {
+				chan="$(IOC):NETPCOLL"
+				clr=29
+				bclr=1
+			}
+			align="horiz. right"
+			limits {
+			}
+		}
+	}
+	"dynamic attribute" {
+		vis="calc"
+		calc="A#-1"
+		chan="$(IOC):NETPCOLL"
+	}
+}

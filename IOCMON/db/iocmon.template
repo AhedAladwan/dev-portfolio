@@ -1,0 +1,631 @@
+# $Author: adwan $
+# $Date: 2005/10/26 06:51:36 $
+#
+# $Revision: 1.13 $
+
+# original copied from /exchange/share/adwan/vxstats/db/vxstats.db
+
+#Original vme.dbd
+############################
+record(calcout,"$(CRATE):CALCSTATUS")
+{
+    field(INPA,"$(CRATE):LOAD NPP MS")
+    field(INPB,"$(CRATE):MEMFREE NPP MS")
+    field(INPC,"$(CRATE):CACLNT NPP MS")
+    field(INPD,"$(CRATE):CALNCONN NPP MS")
+    field(INPE,"$(CRATE):NPIEDIFF NPP MS")
+    field(INPF,"$(CRATE):NPOEDIFF MS")
+    field(INPG,"$(CRATE):NPCDIFF NPP MS")
+    field(INPH,"$(CRATE):NPDDIFF NPP MS")
+    field(INPI,"$(CRATE):BPDDIFF NPP MS")
+    field(INPJ,"$(CRATE):BPWDIFF NPP MS")
+    field(INPK,"$(CRATE):BPDRDIFF NPP MS")
+    field(INPL,"$(CRATE):FDAV NPP MS")
+    field(CALC,"1")
+    field(OUT,"$(CRATE):STATUS PP MS")
+    field(SCAN,"1 second")
+}
+
+record(bi,"$(CRATE):STATUS")
+{ 
+    field(ONAM,"STATUS")
+}
+
+record(sub,"$(CRATE):REBOOT")
+{ 
+    field(DESC,"Channel to reboot CRATE")
+    field(SNAM,"reboot")
+}
+
+record(stringin,"$(CRATE):BOOT-DIR")
+{
+    field(VAL, "NOT_init")
+    field(ASG, "BOOTPC")
+}
+
+record (calcout, "$(CRATE):UPTIME")
+{
+    field (DESC, "Seconds since last reboot")
+    field (EGU,  "s")
+    field (SCAN, "1 second")
+    field (PINI, "YES")
+    field (INPA, "$(CRATE):UPTIME")
+    field (CALC, "A+1")
+    field (OCAL, "A&1")
+    field (DOPT, "Use OCAL")
+    field (OUT,  "$(CRATE):WD PP")
+}
+
+record (bo, "$(CRATE):WD")
+{
+}
+
+#############################
+#Part coming from vxstats.template
+#############################
+record(ai,"$(CRATE):CACLNT") {
+    field(DESC, "CA Clients")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@ca_clients")
+    field(EGU,  "#")
+    field(HOPR, "200")
+    field(HIHI, "175")
+    field(HIGH, "100")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+    field(ADEL, "3")
+}
+
+record(ai,"$(CRATE):CACNX") {
+    field(DESC, "CA Connections")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@ca_connections")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "100")
+}
+
+record(ai,"$(CRATE):CAL") {
+    field(DESC, "CA LINKS")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@ca_links")
+    field(EGU,  "#")
+    field(PINI, "YES")
+}
+
+record(ai,"$(CRATE):CALNCONN") {
+    field(DESC, "CA Links Not Conncted")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@ca_lnconn")
+    field(EGU,  "#")
+    field(HOPR, "20000")
+    field(HIHI, "20")
+    field(HIGH, "1")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+    field(ADEL, "1")
+}
+
+record(ai,"$(CRATE):CALDCONN") {
+    field(DESC, "CA Links Disconnected")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@ca_ldconn")
+    field(EGU,  "#")
+    field(PINI, "YES")
+}
+
+record(ai,"$(CRATE):NETPSENT") {
+    field(DESC, "NET Packets Sent")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@net_psnd")
+    field(EGU,  "#")
+    field(PINI, "YES")
+}
+
+record(calcout,"$(CRATE):NPSDIFF") {
+    field(DESC, "NET Packets Sent diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.A")
+    field(INPB, "$(CRATE):NETPSENT")
+    field(CALC, "B-A")
+    field(PINI, "YES")
+    field(FLNK, "$(CRATE):NPRDIFF")
+
+}
+
+record(ai,"$(CRATE):NETPRCV") {
+    field(DESC, "NET Packets Sent")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@net_prcv")
+    field(EGU,  "#")
+    field(PINI, "YES")
+}
+
+record(calcout,"$(CRATE):NPRDIFF") {
+    field(DESC, "NET Packets Rcv diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.B")
+    field(INPB, "$(CRATE):NETPRCV")
+    field(CALC, "B-A")
+    field(PINI, "YES")
+    field(FLNK, "$(CRATE):NPIEDIFF")
+
+
+}
+
+record(ai,"$(CRATE):NETPIERR") {
+    field(DESC, "NET Packets Inp Err")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@net_pierror")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "100")
+}
+
+record(calcout,"$(CRATE):NPIEDIFF") {
+    field(DESC, "NET input err diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.C")
+    field(INPB, "$(CRATE):NETPIERR")
+    field(CALC, "B-A")
+    field(HIHI, "100")
+    field(HIGH, "1")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+    field(FLNK, "$(CRATE):NPOEDIFF")
+}
+
+record(ai,"$(CRATE):NETPOERR") {
+    field(DESC, "NET Packets Out Err")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@net_poerror")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "100")
+}
+
+record(calcout,"$(CRATE):NPOEDIFF") {
+    field(DESC, "NET output err diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.D")
+    field(INPB, "$(CRATE):NETPOERR")
+    field(CALC, "B-A")
+    field(HIHI, "100")
+    field(HIGH, "1")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+    field(FLNK, "$(CRATE):NPCDIFF")
+}
+
+record(ai,"$(CRATE):NETPCOLL") {
+    field(DESC, "NET Packets Collisions")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@net_pcoll")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "100")
+}
+
+record(calcout,"$(CRATE):NPCDIFF") {
+    field(DESC, "NET collision diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.E")
+    field(INPB, "$(CRATE):NETPCOLL")
+    field(CALC, "B-A")
+    field(HIHI, "100")
+    field(HIGH, "1")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+    field(FLNK, "$(CRATE):NPDDIFF")
+}
+
+record(ai,"$(CRATE):NETPDROP") {
+    field(DESC, "NET Packets Dropped")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@net_pdrop")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "100")
+}
+
+record(calcout,"$(CRATE):NPDDIFF") {
+    field(DESC, "NET Drop Diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.F")
+    field(INPB, "$(CRATE):NETPDROP")
+    field(CALC, "B-A")
+    field(HIHI, "100")
+    field(HIGH, "1")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+    field(FLNK, "$(CRATE):BPDDIFF")
+}
+
+record(ai,"$(CRATE):BUFPDROP") {
+    field(DESC, "BUF Packets Dropped")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@buf_pdrop")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "1")
+}
+
+record(calcout,"$(CRATE):BPDDIFF") {
+    field(DESC, "BUF Drop diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.G")
+    field(INPB, "$(CRATE):BUFPDROP")
+    field(CALC, "B-A")
+    field(HIHI, "10")
+    field(HIGH, "1")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+    field(FLNK, "$(CRATE):BPWDIFF")
+}
+
+record(ai,"$(CRATE):BUFPWAIT") {
+    field(DESC, "BUF Packets wait")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@buf_pwait")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "1")
+}
+
+record(calcout,"$(CRATE):BPWDIFF") {
+    field(DESC, "BUF Wait Diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.H")
+    field(INPB, "$(CRATE):BUFPWAIT")
+    field(CALC, "B-A")
+    field(HIHI, "10")
+    field(HIGH, "1")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+    field(FLNK, "$(CRATE):BPDRDIFF")
+}
+
+record(ai,"$(CRATE):BUFPDRAIN") {
+    field(DESC, "BUF Packets Drain")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@buf_pdrain")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "1")
+}
+
+record(calcout,"$(CRATE):BPDRDIFF") {
+    field(DESC, "BUF Drain Diff")
+    field(EGU,  "#")
+    field(INPA, "$(CRATE):NETSTPREV.I")
+    field(INPB, "$(CRATE):BUFPDRAIN")
+    field(CALC, "B-A")
+    field(HIHI, "10")
+    field(HIGH, "1")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PINI, "YES")
+}
+
+record(ai,"$(CRATE):FDUSED") {
+    field(DESC, " File Descriptors In Use")
+    field(SCAN, "10 second")
+    field(PINI, "YES")
+    field(DTYP, "VX stats")
+    field(FLNK, "$(CRATE):FDAV.VAL  PP MS")
+    field(INP,  "@fd")
+    field(EGU,  "#")
+    field(ADEL, "3")
+}
+
+record(ai,"$(CRATE):LOAD") {
+    field(DESC, "CPU Load")
+    field(SCAN, "5 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@cpu")
+    field(EGU,  "%")
+    field(HOPR, "100")
+    field(HIHI, "90")
+    field(HIGH, "70")
+    field(HHSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(PREC, "2")
+    field(ADEL, "5")
+}
+
+record(ai,"$(CRATE):MEMALLOCRAW") {
+    field(DESC, "Allocated Memory raw")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@allocated_bytes")
+    field(EGU,  "Byte")
+    field(PINI, "YES")
+}
+
+record(calcout,"$(CRATE):MEMALLOC") {
+    field(DESC, "Allocated Memory")
+    field(INPA, "$(CRATE):MEMALLOCRAW CP MS")
+    field(CALC, "A/1e6")
+    field(EGU,  "MB")
+    field(PINI, "YES")
+    field(PREC, "4")
+    field(ADEL, "1")
+}
+
+record(ai,"$(CRATE):MEMFREE-RAW") {
+    field(DESC, "Free Memory")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@free_bytes")
+    field(EGU,  "Byte")
+    field(PINI, "YES")
+}
+
+record(calcout,"$(CRATE):MEMFREE") {
+    field(DESC, "Free Memory")
+    field(INPA, "$(CRATE):MEMFREE-RAW CP MS")
+    field(CALC, "A/1e6")
+    field(EGU,  "MB")
+    field(PINI, "YES")
+    field(PREC, "4")
+    field(ADEL, "1")
+}
+
+record(ai,"$(CRATE):MEMMAX-RAW") {
+    field(DESC, "Maximum Free Memory Block")
+    field(SCAN, "10 second")
+    field(DTYP, "VX stats")
+    field(INP,  "@max_free")
+    field(EGU,  "Byte")
+    field(HOPR, "50000000")
+    field(LOLO, "100000")
+    field(LOW,  "500000")
+    field(LLSV, "MAJOR")
+    field(LSV,  "MINOR")
+    field(PINI, "YES")
+}
+
+record(calcout,"$(CRATE):MEMMAX") {
+    field(DESC, "Maximum Free Memory Block")
+    field(INPA, "$(CRATE):MEMMAX-RAW CP MS")
+    field(CALC, "A/1e6")
+    field(EGU,  "MB")
+    field(PINI, "YES")
+    field(PREC, "4")
+    field(ADEL, "1")
+}
+
+record(ao,"$(CRATE):R-CA") {
+    field(DESC, "Rate for CA")
+    field(DTYP, "VX stats")
+    field(OUT,  "@ca_scan_rate")
+    field(EGU,  "s")
+    field(DRVH, "10")
+    field(DRVL, "1")
+    field(HOPR, "10")
+    field(LOPR, "0")
+    field(AOFF, "0")
+    field(PINI, "YES")}
+
+record(ao,"$(CRATE):R-FD") {
+    field(DESC, "Rate for FD")
+    field(DTYP, "VX stats")
+    field(OUT,  "@fd_scan_rate")
+    field(EGU,  "s")
+    field(DRVH, "10")
+    field(DRVL, "1")
+    field(HOPR, "10")
+    field(PINI, "YES")}
+
+record(ao,"$(CRATE):R-LOAD") {
+    field(DESC, "Rate for CPU Load")
+    field(DTYP, "VX stats")
+    field(OUT,  "@cpu_scan_rate")
+    field(EGU,  "s")
+    field(DRVH, "10")
+    field(DRVL, "1")
+    field(HOPR, "10")
+    field(PINI, "YES")}
+
+record(ao,"$(CRATE):R-MEM") {
+    field(DESC, "Rate for Memory")
+    field(DTYP, "VX stats")
+    field(OUT, "@memory_scan_rate")
+    field(EGU, "s")
+    field(DRVH, "10")
+    field(DRVL, "1")
+    field(HOPR, "10")
+    field(PINI, "YES")}
+
+record(calc,"$(CRATE):FDAV") {
+    field(DESC, "Available FDs")
+    field(CALC, "B-A")
+    field(INPA, "$(CRATE):FDUSED.VAL  NPP MS")
+    field(INPB, "$(CRATE):FDMAX.VAL  PP MS")
+    field(EGU,  "#")
+    field(HOPR, "150")
+    field(LOLO, "5")
+    field(LOW,  "20")
+    field(LLSV, "MAJOR")
+    field(LSV,  "MINOR")
+    field(PINI, "YES")
+    field(ADEL, "3")
+}
+
+record(longin,"$(CRATE):FDMAX") {
+    field(DESC, "Max File Descriptors")
+    field(PINI, "YES")
+    field(DTYP, "vxWorks Variable")
+    field(INP,  "@maxFiles")
+    field(EGU,  "#")
+    field(PINI, "YES")
+    field(ADEL, "5")
+}
+
+record(timestamp,"$(CRATE):TIME") {
+    field(DESC, "The current time")
+    field(SCAN, "1 second")
+    field(TSEL, "0")
+    field(TST,  "Mon DD HH:MM:SS")}
+
+record(timestamp,"$(CRATE):BOOTTIME") {
+    field(DESC, "Time the IOC was booted")
+    field(PINI, "YES")
+    field(TSEL, "0")
+    field(DISV, "0")
+    field(SDIS, "$(CRATE):BOOTTIME.UDF  NPP NMS")
+    field(TST,  "Mon DD HH:MM:SS")}
+
+record(calc,"$(CRATE):HBTMOD") {
+    field(DESC, "Heartbeat mod 9")
+    field(SCAN, "1 second")
+    field(CALC, "A%9")
+    field(INPA, "$(CRATE):HBT.VAL .NPP.NMS")
+    field(EGU,  "ticks")
+    field(PREC, "0")}
+
+record(calc,"$(CRATE):HBT") {
+    field(DESC, "IOC heartbeat")
+    field(SCAN, "1 second")
+    field(FLNK, "$(CRATE):HBTMOD.VAL ")
+    field(CALC, "A>=B?0:A+1")
+    field(INPA, "$(CRATE):HBT.VAL .NPP.NMS")
+    field(INPB, "98")
+    field(EGU,  "ticks")
+    field(PREC, "0")}
+
+record(calcout,"$(CRATE):HBTSYNC") {
+    field(DESC, "IOC heartbeat Sync")
+    field(SCAN, "Passive")
+    field(OOPT, "3")
+    field(CALC, "A=0?1:0")
+    field(INPA, "$(CRATE):HBT.VAL .CP.NMS")
+    field(OUT, "$(CRATE):NETSTPREV.PROC .NPP .NMS")
+    field(EGU,  "ticks")
+    field(PREC, "0")
+}
+
+record(calcout,"$(CRATE):HBTFLAG") {
+    field(DESC, "IOC heartbeat flag")
+    field(SCAN, "Passive")
+    field(OOPT, "3")
+    field(CALC, "A=96?1:0")
+    field(INPA, "$(CRATE):HBT.VAL .CP.NMS")
+    field(OUT, "$(CRATE):NPSDIFF.PROC .NPP .NMS")
+    field(EGU,  "ticks")
+    field(PREC, "0")
+}
+
+record(calcout,"$(CRATE):NETSTPREV") {
+    field(DESC, "Net stats previous")
+    field(SCAN, "Passive")
+    field(INPA, "$(CRATE):NETPSENT.VAL  .NPP.NMS")
+    field(INPB, "$(CRATE):NETPRCV.VAL   .NPP.NMS")
+    field(INPC, "$(CRATE):NETPIERR.VAL  .NPP.NMS")
+    field(INPD, "$(CRATE):NETPOERR.VAL  .NPP.NMS")
+    field(INPE, "$(CRATE):NETPCOLL.VAL  .NPP.NMS")
+    field(INPF, "$(CRATE):NETPDROP.VAL  .NPP.NMS")
+    field(INPG, "$(CRATE):BUFPDROP.VAL  .NPP.NMS")
+    field(INPH, "$(CRATE):BUFPWAIT.VAL  .NPP.NMS")
+    field(INPI, "$(CRATE):BUFPDRAIN.VAL .NPP.NMS")
+    field(EGU,  "#")
+    field(PREC, "0")
+    field(CALC, "0")
+    field(PINI, "YES")
+}
+
+record(stringin,"$(CRATE):STRSCRIPT1") {
+    field(DESC, "location of startup script")
+    field(DTYP, "VX stats")
+    field(INP,  "@startup_script_1")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):STRSCRIPT2") {
+    field(DESC, "startup scr. loc. pt2")
+    field(DTYP, "VX stats")
+    field(INP,  "@startup_script_2")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):BOOTDEV") {
+    field(DESC, "boot line pt1")
+    field(DTYP, "VX stats")
+    field(INP,  "@bootline_1")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):IOCIP") {
+    field(DESC, "boot line pt2")
+    field(DTYP, "VX stats")
+    field(INP,  "@bootline_2")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):BOOTFILE") {
+    field(DESC, "boot line pt3")
+    field(DTYP, "VX stats")
+    field(INP,  "@bootline_3")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):HOSTNAME") {
+    field(DESC, "boot line pt4")
+    field(DTYP, "VX stats")
+    field(INP,  "@bootline_4")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):HOSTIP") {
+    field(DESC, "boot line pt5")
+    field(DTYP, "VX stats")
+    field(INP,  "@bootline_5")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):GATEWAYIP") {
+    field(DESC, "boot line pt6")
+    field(DTYP, "VX stats")
+    field(INP,  "@bootline_6")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):BSP-REV") {
+    field(DESC, "BSP revision")
+    field(DTYP, "VX stats")
+    field(INP,  "@bsp_rev")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):VXWORKS-VERS") {
+    field(DESC, "vxWorks version")
+    field(DTYP, "VX stats")
+    field(INP,  "@vxWorks_ver")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):KERNEL-VERS") {
+    field(DESC, "kernel version")
+    field(DTYP, "VX stats")
+    field(INP,  "@kernel_ver")
+    field(PINI, "YES")}
+
+record(stringin,"$(CRATE):EPICS-VERS") {
+    field(DESC, "EPICS version")
+    field(DTYP, "VX stats")
+    field(INP,  "@epics_ver")
+    field(PINI, "YES")}
+
+

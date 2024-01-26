@@ -1,0 +1,31 @@
+TIME        3600    # local EPICS time
+UPTIME      3600    # seconds since reboot
+CACLNT      Monitor # number of connected clients (ADEL 3)
+CACNX       Monitor # number of connected channels(ADEL 100)
+LOAD        Monitor # IOC load (ADEL 5 (%))
+MEMALLOC    Monitor # Allocated memory (ADEL 1 (MB))
+MEMFREE     Monitor # Available memory (ADEL 1 (MB))
+MEMMAX      Monitor # Max. free block  (ADEL 1 (MB))
+FDAV        Monitor # Available file descriptors (ADEL 3)
+FDMAX       Monitor # Max. number file descriptors (ADEL 5)
+FDUSED      Monitor # Used file descriptors (ADEL 3)
+BOOTTIME    Monitor # Time the IOC was booted (String)
+BOOTDEV     Monitor # boot line pt1: boot interface
+IOCIP       Monitor # boot line pt2: boot IP address
+BOOTFILE    Monitor # boot line pt3: boot image
+HOSTNAME    Monitor # boot line pt4: boot PC name
+HOSTIP      Monitor # boot line pt5: boot PC IP address
+GATEWAYIP   Monitor # boot line pt6: gateway IP address (should be empty string)
+BSP-REV     Monitor # BSP revision
+KERNEL-VERS Monitor # kernel version
+EPICS-VERS  Monitor # EPICS version
+STATUS      Monitor # STATUS Flag
+BOOT-DIR    Monitor # Boot Directory (better use BOOTFILE)
+CALNCONN    Monitor # CA DB links not connected (ADEL 1)
+NETPIERR    Monitor # NET Packets Inp Err (ADEL 100)
+NETPOERR    Monitor # NET Packets Out Err (ADEL 100)
+NETPCOLL    Monitor # NET Packets Collisions (ADEL 100)
+NETPDROP    Monitor # NET Packets Dropped (ADEL 100)
+BUFPDROP    Monitor # Times failed to find space (ADEL 1)
+BUFPWAIT    Monitor # Times waited for space (ADEL 1)
+BUFPDRAIN   Monitor # Times drained space for space (ADEL 1)

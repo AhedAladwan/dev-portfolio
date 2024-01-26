@@ -1,0 +1,66 @@
+-*- outline -*-
+
+How to Use VX Stat Support on Your IOC
+======================================
+
+* config/RELEASE   
+Add
+VX_STATS=$(SHARE_RELEASE)/vxStats/R1-1
+
+* In main application's baseLIBOBJS      
+Assert that the same-name vx stat support from EPICS
+base is NOT included by e.g. commenting it out:
+
+#LIBOBJS += $(EPICS_BASE_BIN)/devVXStats.o  
+
+* In your main application's src/Makefile.Vx,
+include the VX Stats binaries:
+LIBOBJS += $(VX_STATS_BIN)/vxStatsLib  
+
+* In your main application's dbd file,
+include the DBD description:
+
+include "vxStats.dbd"
+
+* Use the vx stats template
+vxStatsApp/Db/ioc.substitutions explains
+the template files and macro names.
+
+Example use: create a substitutions file like this:
+
+# Coerce vxStat templates into something
+# that accepts LLRF marcos S, SS, N
+
+file stats.template
+{
+    {P=$(S)_$(SS):IOC$(N),
+        HMM=50000000,WMM=500000,AMM=100000,
+        HCP=100,WCP=50,ACP=80,
+        HCL=200,WCL=100,ACL=175,
+        HCX=2000,WCX=1000,ACX=1750,
+        HFD=150,WFD=20,AFD=5}
+}
+file reboot.template
+{
+    {P=$(S)_$(SS):IOC$(N),T=3}
+}
+
+Tell the Makefile.Host to use that template 
+and expand it into a DB file:
+#----------------------------------------------------
+# Add databases, templates, substitutions like this
+DB +=  stat_llrf.db
+
+#----------------------------------------------------
+# Declare template files which do not show up in DB
+USES_TEMPLATE += $(VX_STATS)/db/stats.template
+USES_TEMPLATE += $(VX_STATS)/db/reboot.template
+                              
+* EDM
+You can use the "IOC_Status.edl" that comes
+with vx stats. It requires a "P" macro.
+When following the above template, set
+P=$(S)_$(SS):IOC$(N)
+
+~                             
+

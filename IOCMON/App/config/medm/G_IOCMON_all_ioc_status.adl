@@ -1,0 +1,4576 @@
+
+file {
+	name="/afs/psi.ch/user/z/zimoch/cvs/G/IOCMON/App/config/medm/G_IOCMON_all_ioc_status.adl"
+	version=030003
+}
+display {
+	object {
+		x=45
+		y=40
+		width=1103
+		height=810
+	}
+	clr=14
+	bclr=2
+	cmap=""
+	gridSpacing=5
+	gridOn=1
+	snapToGrid=1
+}
+"color map" {
+	ncolors=65
+	colors {
+		ffffff,
+		ececec,
+		dadada,
+		c8c8c8,
+		bbbbbb,
+		aeaeae,
+		9e9e9e,
+		919191,
+		858585,
+		787878,
+		696969,
+		5a5a5a,
+		464646,
+		2d2d2d,
+		000000,
+		00d800,
+		1ebb00,
+		339900,
+		2d7f00,
+		216c00,
+		fd0000,
+		de1309,
+		be190b,
+		a01207,
+		820400,
+		5893ff,
+		597ee1,
+		4b6ec7,
+		3a5eab,
+		27548d,
+		fbf34a,
+		f9da3c,
+		eeb62b,
+		e19015,
+		cd6100,
+		ffb0ff,
+		d67fe2,
+		ae4ebc,
+		8b1a96,
+		610a75,
+		a4aaff,
+		8793e2,
+		6a73c1,
+		4d52a4,
+		343386,
+		c7bb6d,
+		b79d5c,
+		a47e3c,
+		7d5627,
+		58340f,
+		99ffff,
+		73dfff,
+		4ea5f9,
+		2a63e4,
+		0a00b8,
+		ebf1b5,
+		d4db9d,
+		bbc187,
+		a6a462,
+		8b8239,
+		73ff6b,
+		52da3b,
+		3cb420,
+		289315,
+		1a7309,
+	}
+}
+text {
+	object {
+		x=354
+		y=7
+		width=394
+		height=43
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="MACHINE VME STATUS"
+	align="horiz. centered"
+}
+"related display" {
+	object {
+		x=241
+		y=204
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM7"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM7"
+}
+"related display" {
+	object {
+		x=241
+		y=229
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM8"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM8"
+}
+"related display" {
+	object {
+		x=241
+		y=254
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM9"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM9"
+}
+"related display" {
+	object {
+		x=241
+		y=279
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM10"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM10"
+}
+"related display" {
+	object {
+		x=241
+		y=304
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM11"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM11"
+}
+"related display" {
+	object {
+		x=241
+		y=329
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM12"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM12"
+}
+"related display" {
+	object {
+		x=241
+		y=354
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-CUR"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-CUR"
+}
+"related display" {
+	object {
+		x=241
+		y=704
+		width=110
+		height=20
+	}
+	clr=14
+	bclr=3
+	label="-ABOVA-VME-34"
+}
+"related display" {
+	object {
+		x=241
+		y=729
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABOVA-VME-56"
+	}
+	clr=14
+	bclr=3
+	label="-ABOVA-VME-56"
+}
+"related display" {
+	object {
+		x=241
+		y=754
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABRDI-VME-BPM"
+	}
+	clr=14
+	bclr=3
+	label="-ABRDI-VME-BPM"
+}
+"text update" {
+	object {
+		x=361
+		y=731
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ABOVA-VME-56:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=756
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ABRDI-VME-BPM:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=241
+		y=779
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABRMA-VME-BCQ"
+	}
+	clr=14
+	bclr=3
+	label="-ABRMA-VME-BCQ"
+}
+"text update" {
+	object {
+		x=361
+		y=780
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ABRMA-VME-BCQ:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=241
+		y=379
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-OP"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-OP"
+}
+"related display" {
+	object {
+		x=241
+		y=404
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-OP2"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-OP2"
+}
+"related display" {
+	object {
+		x=241
+		y=429
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-OP3"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-OP3"
+}
+"related display" {
+	object {
+		x=241
+		y=454
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-TU"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-TU"
+}
+"related display" {
+	object {
+		x=241
+		y=479
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABOMA-VME-BC34"
+	}
+	clr=14
+	bclr=3
+	label="-ABOMA-VME-BC34"
+}
+"related display" {
+	object {
+		x=241
+		y=504
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABOMA-VME-C12"
+	}
+	clr=14
+	bclr=3
+	label="-ABOMA-VME-C12"
+}
+"related display" {
+	object {
+		x=241
+		y=529
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABOMA-VME-C23"
+	}
+	clr=14
+	bclr=3
+	label="-ABOMA-VME-C23"
+}
+"related display" {
+	object {
+		x=241
+		y=554
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABOMA-VME-C45"
+	}
+	clr=14
+	bclr=3
+	label="-ABOMA-VME-C45"
+}
+"related display" {
+	object {
+		x=241
+		y=579
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABOMA-VME-C56"
+	}
+	clr=14
+	bclr=3
+	label="-ABOMA-VME-C56"
+}
+"related display" {
+	object {
+		x=241
+		y=604
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABOMA-VME-C61"
+	}
+	clr=14
+	bclr=3
+	label="-ABOMA-VME-C61"
+}
+"related display" {
+	object {
+		x=241
+		y=629
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABOMA-VME-CQS"
+	}
+	clr=14
+	bclr=3
+	label="-ABOMA-VME-CQS"
+}
+"related display" {
+	object {
+		x=241
+		y=654
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABORF-VME-A0A"
+	}
+	clr=14
+	bclr=3
+	label="-ABORF-VME-A0A"
+}
+"related display" {
+	object {
+		x=241
+		y=679
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABORF-VME-A0B"
+	}
+	clr=14
+	bclr=3
+	label="-ABORF-VME-A0B"
+}
+"related display" {
+	object {
+		x=241
+		y=55
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM1"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM1"
+}
+"related display" {
+	object {
+		x=241
+		y=80
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM2"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM2"
+}
+"related display" {
+	object {
+		x=241
+		y=130
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM4"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM4"
+}
+"related display" {
+	object {
+		x=241
+		y=179
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM6"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM6"
+}
+"text update" {
+	object {
+		x=361
+		y=207
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM7:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=232
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM8:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=257
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM9:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=282
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM10:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=307
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM11:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=332
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM12:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=357
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-CUR:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=382
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-OP:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=407
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-OP2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=432
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-OP3:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=457
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-TU:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=482
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABOMA-VME-BC34:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=507
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABOMA-VME-C12:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=532
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABOMA-VME-C23:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=557
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABOMA-VME-C45:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=582
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABOMA-VME-C56:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=607
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABOMA-VME-C61:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=632
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABOMA-VME-CQS:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=657
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABORF-VME-A0A:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=681
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABORF-VME-A0B:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=58
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=83
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=133
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM4:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=182
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM6:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=235
+		y=49
+		width=184
+		height=756
+	}
+	"basic attribute" {
+		clr=25
+		fill="outline"
+		width=3
+	}
+}
+"related display" {
+	object {
+		x=695
+		y=304
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-3HC"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-3HC"
+}
+"related display" {
+	object {
+		x=695
+		y=330
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-A1A"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-A1A"
+}
+"text update" {
+	object {
+		x=813
+		y=308
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-3HC:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=333
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-A1A:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=695
+		y=355
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-A1B"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-A1B"
+}
+"related display" {
+	object {
+		x=695
+		y=380
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-A2A"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-A2A"
+}
+"related display" {
+	object {
+		x=695
+		y=405
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-A2B"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-A2B"
+}
+"text update" {
+	object {
+		x=813
+		y=357
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-A1B:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=383
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-A2A:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=408
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-A2B:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=695
+		y=430
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-A3A"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-A3A"
+}
+"related display" {
+	object {
+		x=695
+		y=455
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-A3B"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-A3B"
+}
+"related display" {
+	object {
+		x=695
+		y=480
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-A4A"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-A4A"
+}
+"text update" {
+	object {
+		x=813
+		y=434
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-A3A:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=459
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-A3B:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=484
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-A4A:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=695
+		y=505
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIRF-VME-A4B"
+	}
+	clr=14
+	bclr=3
+	label="-ARIRF-VME-A4B"
+}
+"related display" {
+	object {
+		x=695
+		y=530
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIVA-VME-1"
+	}
+	clr=14
+	bclr=3
+	label="-ARIVA-VME-1"
+}
+"text update" {
+	object {
+		x=813
+		y=509
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIRF-VME-A4B:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=533
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIVA-VME-1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=695
+		y=555
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIVA-VME-12"
+	}
+	clr=14
+	bclr=3
+	label="-ARIVA-VME-12"
+}
+"text update" {
+	object {
+		x=813
+		y=558
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIVA-VME-12:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=470
+		y=480
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C6"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C6"
+}
+"related display" {
+	object {
+		x=470
+		y=505
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C7"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C7"
+}
+"text update" {
+	object {
+		x=588
+		y=483
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C6:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=588
+		y=508
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C7:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=470
+		y=530
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C8"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C8"
+}
+"related display" {
+	object {
+		x=470
+		y=555
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C9"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C9"
+}
+"related display" {
+	object {
+		x=470
+		y=580
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C10"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C10"
+}
+"text update" {
+	object {
+		x=588
+		y=533
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C8:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=588
+		y=557
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C9:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=588
+		y=582
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C10:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=470
+		y=605
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C11"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C11"
+}
+"related display" {
+	object {
+		x=470
+		y=630
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C12"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C12"
+}
+"related display" {
+	object {
+		x=471
+		y=655
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-MBFA"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-MBFA"
+}
+"text update" {
+	object {
+		x=588
+		y=606
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C11:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=588
+		y=632
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C12:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=680
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-MBFB"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-MBFB"
+}
+"related display" {
+	object {
+		x=695
+		y=54
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-BC"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-BC"
+}
+"text update" {
+	object {
+		x=813
+		y=57
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-BC:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=695
+		y=79
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-CQA"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-CQA"
+}
+"related display" {
+	object {
+		x=695
+		y=104
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-CS"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-CS"
+}
+"related display" {
+	object {
+		x=695
+		y=129
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-QB"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-QB"
+}
+"text update" {
+	object {
+		x=813
+		y=82
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-CQA:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=107
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-CS:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=133
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-QB:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=695
+		y=154
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-QC"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-QC"
+}
+"related display" {
+	object {
+		x=695
+		y=179
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-QD"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-QD"
+}
+"related display" {
+	object {
+		x=695
+		y=204
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-QE"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-QE"
+}
+"text update" {
+	object {
+		x=813
+		y=158
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-QC:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=182
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-QD:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=208
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-QE:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=695
+		y=229
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-QF"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-QF"
+}
+"related display" {
+	object {
+		x=695
+		y=254
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-QG"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-QG"
+}
+"related display" {
+	object {
+		x=695
+		y=279
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIMA-VME-QH"
+	}
+	clr=14
+	bclr=3
+	label="-ARIMA-VME-QH"
+}
+"text update" {
+	object {
+		x=813
+		y=233
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-QF:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=257
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-QG:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=813
+		y=282
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIMA-VME-QH:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=455
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C5"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C5"
+}
+"text update" {
+	object {
+		x=589
+		y=458
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C5:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=481
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-GM2"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-GM2"
+}
+"related display" {
+	object {
+		x=471
+		y=55
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM1"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM1"
+}
+"related display" {
+	object {
+		x=471
+		y=80
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM2"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM2"
+}
+"text update" {
+	object {
+		x=1039
+		y=484
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-GM2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=58
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=83
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=105
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM3"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM3"
+}
+"related display" {
+	object {
+		x=471
+		y=130
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM4"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM4"
+}
+"related display" {
+	object {
+		x=471
+		y=155
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM5"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM5"
+}
+"text update" {
+	object {
+		x=589
+		y=108
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM3:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=133
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM4:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=159
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM5:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=180
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM6"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM6"
+}
+"related display" {
+	object {
+		x=471
+		y=205
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM7"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM7"
+}
+"related display" {
+	object {
+		x=471
+		y=230
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM8"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM8"
+}
+"text update" {
+	object {
+		x=589
+		y=183
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM6:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=208
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM7:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=234
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM8:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=472
+		y=255
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM9"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM9"
+}
+"text update" {
+	object {
+		x=590
+		y=258
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM9:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=280
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM10"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM10"
+}
+"text update" {
+	object {
+		x=589
+		y=282
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM10:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=305
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM11"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM11"
+}
+"related display" {
+	object {
+		x=471
+		y=330
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-BPM12"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-BPM12"
+}
+"related display" {
+	object {
+		x=471
+		y=355
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C1"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C1"
+}
+"text update" {
+	object {
+		x=589
+		y=307
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM11:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=332
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-BPM12:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=358
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=380
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C2"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C2"
+}
+"related display" {
+	object {
+		x=471
+		y=405
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C3"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C3"
+}
+"text update" {
+	object {
+		x=589
+		y=383
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=589
+		y=407
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C3:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=470
+		y=430
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-C4"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-C4"
+}
+"text update" {
+	object {
+		x=588
+		y=433
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-C4:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=705
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-OP"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-OP"
+}
+"text update" {
+	object {
+		x=589
+		y=707
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-OP:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=730
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-OP2"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-OP2"
+}
+"text update" {
+	object {
+		x=589
+		y=733
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-OP2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=755
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-PCT"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-PCT"
+}
+"text update" {
+	object {
+		x=589
+		y=759
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-PCT:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=471
+		y=780
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIDI-VME-TUKI"
+	}
+	clr=14
+	bclr=3
+	label="-ARIDI-VME-TUKI"
+}
+"text update" {
+	object {
+		x=589
+		y=783
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIDI-VME-TUKI:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=464
+		y=49
+		width=405
+		height=756
+	}
+	"basic attribute" {
+		clr=25
+		fill="outline"
+		width=3
+	}
+}
+"related display" {
+	object {
+		x=920
+		y=54
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X04SA-VME-ID1"
+	}
+	clr=14
+	bclr=3
+	label="-X04SA-VME-ID1"
+}
+"text update" {
+	object {
+		x=1040
+		y=57
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X04SA-VME-ID1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=920
+		y=79
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X04SA-VME-ID2"
+	}
+	clr=14
+	bclr=3
+	label="-X04SA-VME-ID2"
+}
+"text update" {
+	object {
+		x=1040
+		y=82
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X04SA-VME-ID2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=920
+		y=104
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X05LA-VME-ID2"
+	}
+	clr=14
+	bclr=3
+	label="-X05LA-VME-ID2"
+}
+"text update" {
+	object {
+		x=1040
+		y=107
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X05LA-VME-ID2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=920
+		y=129
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X05LA-VME-ID3"
+	}
+	clr=14
+	bclr=3
+	label="-X05LA-VME-ID3"
+}
+"text update" {
+	object {
+		x=1040
+		y=132
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X05LA-VME-ID3:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=920
+		y=154
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X06SA-VME-ID1"
+	}
+	clr=14
+	bclr=3
+	label="-X06SA-VME-ID1"
+}
+"text update" {
+	object {
+		x=1040
+		y=157
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X06SA-VME-ID1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=920
+		y=179
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X06SA-VME-ID2"
+	}
+	clr=14
+	bclr=3
+	label="-X06SA-VME-ID2"
+}
+"text update" {
+	object {
+		x=1040
+		y=182
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X06SA-VME-ID2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=920
+		y=204
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X07MA-VME-ID1"
+	}
+	clr=14
+	bclr=3
+	label="-X07MA-VME-ID1"
+}
+"text update" {
+	object {
+		x=1040
+		y=207
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X07MA-VME-ID1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=920
+		y=229
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X07MA-VME-ID2"
+	}
+	clr=14
+	bclr=3
+	label="-X07MA-VME-ID2"
+}
+"text update" {
+	object {
+		x=1040
+		y=232
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X07MA-VME-ID2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=255
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X09LA-VME-ID1"
+	}
+	clr=14
+	bclr=3
+	label="-X09LA-VME-ID1"
+}
+"text update" {
+	object {
+		x=1041
+		y=258
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X09LA-VME-ID1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=280
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X09LA-VME-ID2"
+	}
+	clr=14
+	bclr=3
+	label="-X09LA-VME-ID2"
+}
+"text update" {
+	object {
+		x=1041
+		y=283
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X09LA-VME-ID2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=305
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X09LA-VME-ID3"
+	}
+	clr=14
+	bclr=3
+	label="-X09LA-VME-ID3"
+}
+"text update" {
+	object {
+		x=1041
+		y=308
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X09LA-VME-ID3:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=330
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X10SA-VME-ID1"
+	}
+	clr=14
+	bclr=3
+	label="-X10SA-VME-ID1"
+}
+"text update" {
+	object {
+		x=1041
+		y=333
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X10SA-VME-ID1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=355
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X10SA-VME-ID2"
+	}
+	clr=14
+	bclr=3
+	label="-X10SA-VME-ID2"
+}
+"text update" {
+	object {
+		x=1041
+		y=358
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X10SA-VME-ID2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=380
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X11MA-VME-ID1"
+	}
+	clr=14
+	bclr=3
+	label="-X11MA-VME-ID1"
+}
+"text update" {
+	object {
+		x=1041
+		y=383
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X11MA-VME-ID1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=405
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X11MA-VME-ID2"
+	}
+	clr=14
+	bclr=3
+	label="-X11MA-VME-ID2"
+}
+"text update" {
+	object {
+		x=1041
+		y=408
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X11MA-VME-ID2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=430
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=X11MA-VME-ID3"
+	}
+	clr=14
+	bclr=3
+	label="-X11MA-VME-ID3"
+}
+"text update" {
+	object {
+		x=1041
+		y=433
+		width=50
+		height=15
+	}
+	monitor {
+		chan="X11MA-VME-ID3:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=49
+		width=183
+		height=406
+	}
+	"basic attribute" {
+		clr=25
+		fill="outline"
+		width=3
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=54
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ACODI-VME-A"
+	}
+	clr=14
+	bclr=3
+	label="-ACODI-VME-A"
+}
+"related display" {
+	object {
+		x=13
+		y=79
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ACODI-VME-B"
+	}
+	clr=14
+	bclr=3
+	label="-ACODI-VME-B"
+}
+"text update" {
+	object {
+		x=133
+		y=57
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ACODI-VME-A:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=104
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ACORF-VME-FILL"
+	}
+	clr=14
+	bclr=3
+	label="-ACORF-VME-FILL"
+}
+"related display" {
+	object {
+		x=13
+		y=129
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ACOSA-VME-MIS"
+	}
+	clr=14
+	bclr=3
+	label="-ACOSA-VME-MIS"
+}
+"related display" {
+	object {
+		x=13
+		y=154
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ACOSA-VME-MPS"
+	}
+	clr=14
+	bclr=3
+	label="-ACOSA-VME-MPS"
+}
+"text update" {
+	object {
+		x=133
+		y=106
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ACORF-VME-FILL:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=132
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ACOSA-VME-MIS:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=131
+		y=180
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ACOSA-VME-VCS:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=179
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ACOSA-VME-VCS"
+	}
+	clr=14
+	bclr=3
+	label="-ACOSA-VME-VCS"
+}
+rectangle {
+	object {
+		x=8
+		y=49
+		width=185
+		height=182
+	}
+	"basic attribute" {
+		clr=25
+		fill="outline"
+		width=3
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=730
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALBMA-VME-BQ"
+	}
+	clr=14
+	bclr=3
+	label="-ALBMA-VME-BQ"
+}
+"related display" {
+	object {
+		x=13
+		y=755
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALBMA-VME-KY"
+	}
+	clr=14
+	bclr=3
+	label="-ALBMA-VME-KY"
+}
+"text update" {
+	object {
+		x=133
+		y=733
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALBMA-VME-BQ:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=758
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALBMA-VME-KY:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=382
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIDI-VME-BPM"
+	}
+	clr=14
+	bclr=3
+	label="-ALIDI-VME-BPM"
+}
+"related display" {
+	object {
+		x=13
+		y=407
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIDI-VME-CUR"
+	}
+	clr=14
+	bclr=3
+	label="-ALIDI-VME-CUR"
+}
+"text update" {
+	object {
+		x=133
+		y=385
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIDI-VME-BPM:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=409
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIDI-VME-CUR:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=432
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIDI-VME-EO1"
+	}
+	clr=14
+	bclr=3
+	label="-ALIDI-VME-EO1"
+}
+"related display" {
+	object {
+		x=13
+		y=457
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIDI-VME-OP"
+	}
+	clr=14
+	bclr=3
+	label="-ALIDI-VME-OP"
+}
+"related display" {
+	object {
+		x=13
+		y=482
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIDI-VME-OP2"
+	}
+	clr=14
+	bclr=3
+	label="-ALIDI-VME-OP2"
+}
+"text update" {
+	object {
+		x=133
+		y=435
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIDI-VME-EO1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=460
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIDI-VME-OP:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=484
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIDI-VME-OP2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=507
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIMA-VME-A"
+	}
+	clr=14
+	bclr=3
+	label="-ALIMA-VME-A"
+}
+"related display" {
+	object {
+		x=13
+		y=532
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIMA-VME-B"
+	}
+	clr=14
+	bclr=3
+	label="-ALIMA-VME-B"
+}
+"related display" {
+	object {
+		x=13
+		y=557
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIRF-VME-A"
+	}
+	clr=14
+	bclr=3
+	label="-ALIRF-VME-A"
+}
+"text update" {
+	object {
+		x=133
+		y=510
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIMA-VME-A:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=535
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIMA-VME-B:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=560
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIRF-VME-A:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=14
+		y=582
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIRF-VME-AS"
+	}
+	clr=14
+	bclr=3
+	label="-ALIRF-VME-AS"
+}
+"text update" {
+	object {
+		x=134
+		y=585
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIRF-VME-AS:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=607
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIRF-VME-B"
+	}
+	clr=14
+	bclr=3
+	label="-ALIRF-VME-B"
+}
+"text update" {
+	object {
+		x=133
+		y=610
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIRF-VME-B:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=632
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIRF-VME-GUN"
+	}
+	clr=14
+	bclr=3
+	label="-ALIRF-VME-GUN"
+}
+"related display" {
+	object {
+		x=13
+		y=657
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIRF-VME-MOD"
+	}
+	clr=14
+	bclr=3
+	label="-ALIRF-VME-MOD"
+}
+"text update" {
+	object {
+		x=133
+		y=635
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIRF-VME-GUN:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=660
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIRF-VME-MOD:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=780
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALBVA-VME"
+	}
+	clr=14
+	bclr=3
+	label="-ALBVA-VME"
+}
+"text update" {
+	object {
+		x=133
+		y=783
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALBVA-VME:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=8
+		y=376
+		width=181
+		height=329
+	}
+	"basic attribute" {
+		clr=25
+		fill="outline"
+		width=3
+	}
+}
+"text update" {
+	object {
+		x=132
+		y=157
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ACOSA-VME-MPS:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=133
+		y=82
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ACODI-VME-B:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=506
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-1"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-1"
+}
+"related display" {
+	object {
+		x=921
+		y=531
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-2"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-2"
+}
+"text update" {
+	object {
+		x=1039
+		y=509
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-1:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1039
+		y=534
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-2:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=556
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-3"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-3"
+}
+"related display" {
+	object {
+		x=921
+		y=581
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-4"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-4"
+}
+"related display" {
+	object {
+		x=921
+		y=606
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-5"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-5"
+}
+"text update" {
+	object {
+		x=1039
+		y=559
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-3:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1039
+		y=583
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-4:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1039
+		y=609
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-5:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=922
+		y=631
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-6"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-6"
+}
+"text update" {
+	object {
+		x=1040
+		y=634
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-6:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=921
+		y=656
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-7"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-7"
+}
+"text update" {
+	object {
+		x=1039
+		y=659
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-7:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=922
+		y=681
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-8"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-8"
+}
+"related display" {
+	object {
+		x=922
+		y=706
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-9"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-9"
+}
+"related display" {
+	object {
+		x=922
+		y=731
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-10"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-10"
+}
+"text update" {
+	object {
+		x=1040
+		y=683
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-8:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1040
+		y=708
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-9:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=1040
+		y=734
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-10:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=923
+		y=756
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-11"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-11"
+}
+"text update" {
+	object {
+		x=1041
+		y=759
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-11:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=922
+		y=781
+		width=108
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ARIAL-VME-12"
+	}
+	clr=14
+	bclr=3
+	label="-ARIAL-VME-12"
+}
+"text update" {
+	object {
+		x=1040
+		y=784
+		width=49
+		height=15
+	}
+	monitor {
+		chan="ARIAL-VME-12:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+rectangle {
+	object {
+		x=915
+		y=475
+		width=182
+		height=330
+	}
+	"basic attribute" {
+		clr=25
+		fill="outline"
+		width=3
+	}
+}
+rectangle {
+	object {
+		x=8
+		y=724
+		width=181
+		height=81
+	}
+	"basic attribute" {
+		clr=25
+		fill="outline"
+		width=3
+	}
+}
+text {
+	object {
+		x=588
+		y=656
+		width=50
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ignore"
+}
+text {
+	object {
+		x=588
+		y=681
+		width=50
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ignore"
+}
+"related display" {
+	object {
+		x=241
+		y=105
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM3"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM3"
+}
+"related display" {
+	object {
+		x=241
+		y=154
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ABODI-VME-BPM5"
+	}
+	clr=14
+	bclr=3
+	label="-ABODI-VME-BPM5"
+}
+"text update" {
+	object {
+		x=361
+		y=108
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM3:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=361
+		y=157
+		width=50
+		height=14
+	}
+	monitor {
+		chan="ABODI-VME-BPM5:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=913
+		y=7
+		width=186
+		height=30
+	}
+	display[0] {
+		name="G_IOCMON_bl_ioc_status.adl"
+	}
+	clr=14
+	bclr=4
+	label="-BEAMLINES VME's"
+}
+"text update" {
+	object {
+		x=131
+		y=206
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ACORF-VME:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+"related display" {
+	object {
+		x=13
+		y=205
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ACORF-VME"
+	}
+	clr=14
+	bclr=3
+	label="-ACORF-VME"
+}
+"related display" {
+	object {
+		x=15
+		y=680
+		width=110
+		height=20
+	}
+	display[0] {
+		label="more"
+		name="G_IOCMON_ioc_status.adl"
+		args="IOC=ALIVA-VME"
+	}
+	clr=14
+	bclr=3
+	label="-ALIVA-VME"
+}
+"text update" {
+	object {
+		x=135
+		y=683
+		width=50
+		height=15
+	}
+	monitor {
+		chan="ALIVA-VME:STATUS"
+		clr=1
+		bclr=12
+	}
+	clrmod="alarm"
+	align="horiz. centered"
+	limits {
+	}
+}
+text {
+	object {
+		x=360
+		y=704
+		width=50
+		height=14
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ignore"
+}

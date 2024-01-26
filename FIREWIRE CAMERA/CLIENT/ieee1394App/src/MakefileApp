@@ -1,0 +1,25 @@
+#EPICS_BASE = /home/slsop/SLS-VIDEO/base-3.14.7
+BAYER-SRC-PATH	= BAYER-INTERPOLATION
+
+TARGET = firewire 
+#TARGETS_AUX = camera_info grab_gray_image grab_yuv_image red2ppm write_yuv_file yuvtoppm showppm
+
+CFLAGS = -DUNIX  -I /usr/X11R6/include -I $(EPICS_BASE)/include -I $(EPICS_BASE)/include/os/Linux
+
+MOTIF_LIBS = -L/usr/X11R6/lib -lMrm -lX11  -lXm -lXt -lXp -lXext  -lXaw -lSM -lICE BAYER-INTERPOLATION/dc1394_bayer.o
+
+EPICS_LIBS = -L $(EPICS_BASE)/lib/linux-x86 -lca -lCom 
+
+#FIREWIRE_LIBS = -L /usr/local/lib -lraw1394 -ldc1394_control
+
+LDFLAGS = $(FIREWIRE_LIBS) $(EPICS_LIBS) $(MOTIF_LIBS)
+
+all :  $(BAYER-SRC-PATH)/dc1394_bayer.o $(TARGET)
+
+
+$(BAYER-SRC-PATH)/dc1394_bayer.o: $(BAYER-SRC-PATH)/dc1394_bayer.c
+	gcc -I $(BAYER-SRC-PATH)/  -c -o $@ $<
+
+
+clean : 
+	rm -f $(TARGET) BAYER-INTERPOLATION/dc1394_bayer.o

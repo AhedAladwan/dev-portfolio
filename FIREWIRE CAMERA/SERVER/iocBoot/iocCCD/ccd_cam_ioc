@@ -1,0 +1,10 @@
+#! /bin/bash
+
+source ../../setup.sh
+../../bin/linux-x86/setup_camera gain manual
+../../bin/linux-x86/setup_camera gain 300
+../../bin/linux-x86/setup_camera shutter manual
+../../bin/linux-x86/setup_camera shutter 900
+../../bin/linux-x86/setup_camera mode MODE_1024x768_MONO
+../../bin/linux-x86/setup_camera exposure auto
+./st.cmd

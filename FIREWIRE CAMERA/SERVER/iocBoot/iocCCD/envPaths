@@ -1,0 +1,4 @@
+epicsEnvSet(ARCH,"linux-x86")
+epicsEnvSet(IOC,"iocCCD")
+epicsEnvSet(TOP,"/root/PROJECTS/CCD1394")
+epicsEnvSet(EPICS_BASE,"/root/PROJECTS/EPICS/base-3.14.7/")

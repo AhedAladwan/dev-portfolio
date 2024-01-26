@@ -1,0 +1,1024 @@
+###############################################################################
+#                                                                             #
+#                             1394.adl                                        #
+#                                                                             #
+###############################################################################
+
+###############################################################################
+#                                                                             #
+#                          Waveforms                                          #
+#                                                                             #
+###############################################################################
+record(waveform,"$(CAM):data"){
+	field(DESC,"camera data")
+	field(SCAN,".1 second")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @data")
+	field(NELM,"3000000")
+	field(FTVL,"UCHAR")
+	field(FLNK,"$(CAM):xdist")
+}
+
+record(waveform,"$(CAM):xdist"){
+	field(DESC,"camera data")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @xdist")
+	field(NELM,"2000")   # longest waveform supported
+	field(FTVL,"LONG")
+	field(FLNK,"$(CAM):ydist")
+}
+
+record(waveform,"$(CAM):xdist_ref"){
+        field(DESC,"camera data")
+        field(DTYP,"1394")
+        field(INP,"#C0 S0 @xdist_ref")
+        field(NELM,"2000")   # longest waveform supported
+        field(FTVL,"ULONG")
+}
+
+record(waveform,"$(CAM):ydist"){
+	field(DESC,"camera data")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @ydist")
+	field(NELM,"2000")
+	field(FTVL,"LONG")
+	field(FLNK,"$(CAM):xw")
+}
+
+###############################################################################
+#                                                                             #
+#                               STRINGS                                       #
+#                                                                             #
+###############################################################################
+record(stringin,"$(CAM):vendor"){
+	field(DESC,"camera vendor")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @vendor")
+	field(PINI,"YES")
+}
+
+record(stringin,"$(CAM):model"){
+	field(DESC,"camera model")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @model")
+	field(PINI,"YES")
+}
+
+###############################################################################
+#                                                                             #
+#                               AI                                            #
+#                                                                             #
+###############################################################################
+
+record(ai,"$(CAM):xavg"){
+	field(SCAN,"1 second")
+	field(DESC,"xavg")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @xavg")
+	field(HOPR,"100000")
+	field(LOPR,"0")
+	field(PREC,"0")
+	field(FLNK,"$(CAM):yavg")
+}
+
+record(ai,"$(CAM):yavg"){
+	field(DESC,"yavg")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @yavg")
+	field(HOPR,"100000")
+	field(LOPR,"0")
+	field(PREC,"0")
+	field(FLNK,"$(CAM):sw_version")
+}
+
+record(ai,"$(CAM):sw_version"){
+	field(DESC,"sw_version")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @sw_version")
+	field(HOPR,"1.5")
+	field(LOPR,"1.0")
+	field(PREC,"2")
+	field(FLNK,"$(CAM):threshold")
+}
+
+record(ai,"$(CAM):threshold"){
+	field(DESC,"threshold")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @threshold")
+	field(HOPR,"1.5")
+	field(LOPR,"1.0")
+	field(PREC,"2")
+	field(FLNK,"$(CAM):low_thresh")
+}
+
+record(ai,"$(CAM):low_thresh"){
+	field(DESC,"low_thresh")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @low_thresh")
+	field(HOPR,"255")
+	field(LOPR,"0")
+	field(PREC,"0")
+	field(FLNK,"$(CAM):bpp")
+}
+
+record(ai,"$(CAM):bpp"){
+	field(DESC,"camera bpp")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @bpp")
+	field(FLNK,"$(CAM):code")
+}
+
+record(ai,"$(CAM):code"){
+	field(DESC,"camera code")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @code")
+	field(FLNK,"$(CAM):numNodes")
+}
+
+record(ai,"$(CAM):numNodes"){
+	field(DESC,"camera numNodes")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @numNodes")
+	field(FLNK,"$(CAM):numCameras")
+}
+
+record(ai,"$(CAM):numCameras"){
+	field(DESC,"camera numCameras")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @numCameras")
+	field(FLNK,"$(CAM):gain")
+}
+
+
+record(ai,"$(CAM):gain"){
+	field(DESC,"camera gain")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @gain")
+	field(HOPR,"1000")
+	field(HOPR,"0")
+	field(PREC,"6")
+        field(UDF,"0")
+	field(FLNK,"$(CAM):exposure")
+}
+
+record(ai,"$(CAM):gainMax"){
+        field(DESC,"camera gain Max")
+        field(DTYP,"1394")
+        field(INP,"#C0 S0 @gainMax")
+        field(PREC,"6")
+        field(UDF,"0")
+        field(PINI,"YES")
+}
+
+record(ai,"$(CAM):gainMin"){
+        field(DESC,"camera gain Min")
+        field(DTYP,"1394")
+        field(INP,"#C0 S0 @gainMin")
+        field(PREC,"6")
+        field(UDF,"0")
+        field(PINI,"YES")
+}
+
+
+#		read shutter (AA)
+record(ai,"$(CAM):shutter"){
+        field(DESC,"camera shutter")
+        field(DTYP,"1394")
+        field(INP,"#C0 S0 @shutter")
+        field(HOPR,"1000")
+        field(HOPR,"0")
+        field(PREC,"6")
+        field(UDF,"0")
+        field(FLNK,"$(CAM):shutterMax")
+}
+
+record(ai,"$(CAM):shutterMax"){
+        field(DESC,"camera shutter Max")
+        field(DTYP,"1394")
+        field(INP,"#C0 S0 @shutterMax")
+        field(PREC,"6")
+        field(UDF,"0")
+        field(FLNK,"$(CAM):shutterMin")
+}
+
+record(ai,"$(CAM):shutterMin"){
+        field(DESC,"camera shutter Min")
+        field(DTYP,"1394")
+        field(INP,"#C0 S0 @shutterMin")
+        field(PREC,"6")
+        field(UDF,"0")
+}
+
+record(ai,"$(CAM):exposure"){
+	field(DESC,"camera exposure")
+	field(DTYP,"1394")
+	field(HOPR,"1000")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @exposure")
+	field(FLNK,"$(CAM):brightness")
+}
+
+record(ai,"$(CAM):brightness"){
+	field(DESC,"camera brightness")
+	field(DTYP,"1394")
+	field(HOPR,"1000")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @brightness")
+	field(FLNK,"$(CAM):width")
+}
+
+record(ai,"$(CAM):width"){
+	field(DESC,"camera width")
+	field(DTYP,"1394")
+	field(HOPR,"1000")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @width")
+	field(FLNK,"$(CAM):woffset")
+}
+
+record(ai,"$(CAM):woffset"){
+	field(DESC,"camera woffset")
+	field(DTYP,"1394")
+	field(HOPR,"1000")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @woffset")
+	field(FLNK,"$(CAM):height")
+}
+
+record(ai,"$(CAM):height"){
+	field(DESC,"camera height")
+	field(DTYP,"1394")
+	field(HOPR,"1000")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @height")
+	field(FLNK,"$(CAM):hoffset")
+}
+
+record(ai,"$(CAM):hoffset"){
+	field(DESC,"camera hoffset")
+	field(DTYP,"1394")
+	field(HOPR,"1000")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @hoffset")
+	field(FLNK,"$(CAM):size")
+}
+
+record(ai,"$(CAM):size"){
+	field(DESC,"camera size")
+	field(DTYP,"1394")
+	field(HOPR,"1000000")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @size")
+	field(FLNK,"$(CAM):xsn")
+}
+
+record(ai,"$(CAM):xw-raw"){
+	field(DESC,"hor beam width")
+	field(DTYP,"1394")
+	field(HOPR,"768")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @xw")
+        field(PREC,"4")
+	field(FLNK,"$(CAM):xw")
+        field(UDF,"0")
+}
+
+record(calcout,"$(CAM):xw"){
+        field(DESC,"hor beam width")
+        field(HOPR,"768")
+        field(LOPR,"0")
+        field(INPA,"$(CAM):xw-raw NPP NMS")
+	field(CALC,"A")
+        field(PREC,"4")
+        field(FLNK,"$(CAM):xp-raw")
+        field(UDF,"0")
+	field(OUT,"$(CAM):xw")
+	field(IVOA,"Set output to IVOV")
+	field(IVOV,"-1")
+}
+
+record(ai,"$(CAM):xp-raw"){
+	field(DESC,"horz beam pos")
+	field(DTYP,"1394")
+	field(HOPR,"1024")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @xp")
+	field(PREC,"4")
+        field(UDF,"0")
+        field(FLNK,"$(CAM):xp")
+}
+
+record(calcout,"$(CAM):xp"){
+        field(DESC,"horz beam pos")
+        field(HOPR,"1024")
+        field(LOPR,"0")
+        field(INPA,"$(CAM):xp-raw NPP MS")
+        field(CALC,"A")
+        field(PREC,"4")
+        field(UDF,"0")
+        field(OUT,"$(CAM):xp")
+        field(IVOA,"Set output to IVOV")
+        field(IVOV,"-1")
+        field(FLNK,"$(CAM):yp-raw")
+}
+
+
+record(ai,"$(CAM):yp-raw"){
+        field(DESC,"beam ver pos")
+        field(DTYP,"1394")
+        field(HOPR,"1024")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @yp")
+        field(FLNK,"$(CAM):yp")
+        field(PREC,"4")
+        field(UDF,"0")
+}
+
+record(calcout,"$(CAM):yp"){
+        field(DESC,"beam ver pos")
+        field(HOPR,"1024")
+        field(LOPR,"0")
+        field(INPA,"$(CAM):yp-raw NPP MS")
+        field(CALC,"A")
+        field(FLNK,"$(CAM):yw-raw")
+        field(PREC,"4")
+        field(UDF,"0")
+        field(OUT,"$(CAM):yp")
+        field(IVOA,"Set output to IVOV")
+        field(IVOV,"-1")
+
+}
+
+record(ai,"$(CAM):yw-raw"){
+        field(DESC,"beam ver width")
+        field(DTYP,"1394")
+        field(HOPR,"768")
+        field(LOPR,"0")
+        field(UDF,"0")
+        field(PREC,"4")
+        field(INP,"#C0 S0 @yw")
+        field(FLNK,"$(CAM):yw")
+}
+
+record(calcout,"$(CAM):yw"){
+        field(DESC,"beam ver width")
+        field(HOPR,"768")
+        field(LOPR,"0")
+        field(UDF,"0")
+        field(PREC,"4")
+        field(INPA,"$(CAM):yw-raw NPP MS")
+        field(CALC,"A")
+        field(FLNK,"$(CAM):sumTot")
+        field(OUT,"$(CAM):yw")
+        field(IVOA,"Set output to IVOV")
+        field(IVOV,"-1")
+}
+
+
+record(ai,"$(CAM):sumTot"){
+        field(DESC,"Laser Power")
+        field(DTYP,"1394")
+        field(UDF,"0")
+        field(PREC,"4")
+        field(INP,"#C0 S0 @sumTot")
+        field(FLNK,"$(CAM):avg-proc")
+}
+
+grecord(dfanout,"$(CAM):avg-proc")
+{
+        field(OUTA,"$(CAM):xp-avg.PROC")
+        field(OUTB,"$(CAM):xw-avg.PROC")
+        field(OUTC,"$(CAM):yp-avg.PROC")
+        field(OUTD,"$(CAM):yw-avg.PROC")
+	field(OUTE,"$(CAM):sigmaX-avg.PROC")
+        field(OUTF,"$(CAM):sigmaY-avg.PROC")
+        field(OUTG,"$(CAM):sumTot-avg.PROC")
+	field(OUTH,"$(CAM):max.PROC")
+        field(SCAN,"Passive")
+        field(PINI,"YES")
+	field(VAL,"1")
+}
+
+grecord(compress,"$(CAM):xp-avg")
+{
+         field(DESC,"xp avarged value")
+         field(ALG, "Average")
+         field(NSAM,"1")
+         field(N,   "10")
+         field(INP, "$(CAM):xp")
+         field(EGU, "Pixels")
+         field(PINI,"YES")
+         field(PREC,"4")
+}
+
+grecord(compress,"$(CAM):yp-avg")
+{
+         field(DESC,"yp avarged value")
+         field(ALG, "Average")
+         field(NSAM,"1")
+         field(N,   "10")
+         field(INP, "$(CAM):yp")
+         field(EGU, "Pixels")
+         field(PINI,"YES")
+         field(PREC,"4")
+}
+
+grecord(compress,"$(CAM):xw-avg")
+{
+         field(DESC,"xw avarged value")
+         field(ALG, "Average")
+         field(NSAM,"1")
+         field(N,   "10")
+         field(INP, "$(CAM):xw")
+         field(EGU, "Pixels")
+         field(PINI,"YES")
+         field(PREC,"4")
+}
+
+grecord(compress,"$(CAM):yw-avg")
+{
+         field(DESC,"yw avarged value")
+         field(ALG, "Average")
+         field(NSAM,"1")
+         field(N,   "10")
+         field(INP, "$(CAM):yw")
+         field(EGU, "Pixels")
+         field(PINI,"YES")
+         field(PREC,"4")
+}
+
+grecord(compress,"$(CAM):sumTot-avg")
+{
+         field(DESC,"sum avarged value")
+         field(ALG, "Average")
+         field(NSAM,"1")
+         field(N,   "10")
+         field(INP, "$(CAM):sumTot")
+         field(EGU, "Unit")
+         field(PINI,"YES")
+         field(PREC,"4")
+}
+
+grecord(dfanout,"$(CAM):avg-samp")
+{
+        field(OUTA,"$(CAM):xp-avg.N")
+        field(OUTB,"$(CAM):xw-avg.N")
+        field(OUTC,"$(CAM):yp-avg.N")
+        field(OUTD,"$(CAM):yw-avg.N")
+	field(OUTE,"$(CAM):sigmaX-avg.N")
+        field(OUTF,"$(CAM):sigmaY-avg.N")
+        field(OUTH,"$(CAM):sumTot-avg.N")
+        field(SCAN,"Passive")
+        field(PINI,"YES")
+	field(VAL,"10")
+}
+
+record(ai,"$(CAM):xsn"){
+	field(DESC,"x signal/noise")
+	field(DTYP,"1394")
+	field(HOPR,"100")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @xsn")
+	field(FLNK,"$(CAM):ysn")
+}
+
+record(ai,"$(CAM):ysn"){
+	field(DESC,"y signal/noise")
+	field(DTYP,"1394")
+	field(HOPR,"100")
+	field(LOPR,"0")
+	field(INP,"#C0 S0 @ysn")
+        field(FLNK,"$(CAM):max")
+}
+#		more statistics (AA)
+record(ai,"$(CAM):max"){
+        field(DESC,"Pixel maximum reading")
+        field(DTYP,"1394")
+        field(HOPR,"255")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @max")
+        field(FLNK,"$(CAM):maxCol")
+
+}
+
+record(ai,"$(CAM):maxCol"){
+        field(DESC,"Pixel maximum: Col")
+        field(DTYP,"1394")
+        field(HOPR,"1023")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @maxCol")
+        field(FLNK,"$(CAM):maxLine")
+}
+
+record(ai,"$(CAM):maxLine"){
+        field(DESC,"Pixel maximum : Line")
+        field(DTYP,"1394")
+        field(HOPR,"767")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @maxLine")
+        field(FLNK,"$(CAM):xdistMaxSum")
+}
+
+record(ai,"$(CAM):xdistMaxSum"){
+        field(DESC,"xdistMaxSum")
+        field(DTYP,"1394")
+        field(HOPR,"10000000")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @xdistMaxSum")
+        field(FLNK,"$(CAM):ydistMaxSum")
+}
+
+record(ai,"$(CAM):ydistMaxSum"){
+        field(DESC,"ydistMaxSum")
+        field(DTYP,"1394")
+        field(HOPR,"10000000")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @ydistMaxSum")
+        field(FLNK,"$(CAM):xdistMaxCol")
+}
+
+record(ai,"$(CAM):xdistMaxCol"){
+        field(DESC,"xdistMaxCol")
+        field(DTYP,"1394")
+        field(HOPR,"10000000")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @xdistMaxCol")
+        field(FLNK,"$(CAM):ydistMaxLine")
+}
+
+record(ai,"$(CAM):ydistMaxLine"){
+        field(DESC,"ydistMaxLine")
+        field(DTYP,"1394")
+        field(HOPR,"10000000")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @ydistMaxLine")
+        field(FLNK,"$(CAM):sCol")
+}
+
+record(ai,"$(CAM):sCol"){
+        field(DESC,"sCol")
+        field(DTYP,"1394")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @sCol")
+        field(FLNK,"$(CAM):eCol")
+}
+record(ai,"$(CAM):eCol"){
+        field(DESC,"eCol")
+        field(DTYP,"1394")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @eCol")
+        field(FLNK,"$(CAM):sLine")
+}
+record(ai,"$(CAM):sLine"){
+        field(DESC,"sLine")
+        field(DTYP,"1394")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @sLine")
+        field(FLNK,"$(CAM):eLine")
+}
+record(ai,"$(CAM):eLine"){
+        field(DESC,"eLine")
+        field(DTYP,"1394")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @eLine")
+        field(FLNK,"$(CAM):sigmaX")
+}
+
+record(ai,"$(CAM):sigmaX"){
+        field(DESC,"sigmaX")
+        field(DTYP,"1394")
+        field(HOPR,"1024")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @sigmaX")
+        field(FLNK,"$(CAM):sigmaY")
+        field(PREC,"4")
+}
+
+grecord(compress,"$(CAM):sigmaX-avg")
+{
+         field(DESC,"sigmaX avg value")
+         field(ALG, "Average")
+         field(NSAM,"1")
+         field(N,   "10")
+         field(INP, "$(CAM):sigmaX CP")
+         field(PINI,"YES")
+         field(PREC,"4")
+}
+
+record(ai,"$(CAM):sigmaY"){
+        field(DESC,"sigmaY")
+        field(DTYP,"1394")
+        field(HOPR,"768")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @sigmaY")
+        field(FLNK,"$(CAM):dropframes")
+        field(PREC,"4")
+}
+
+grecord(compress,"$(CAM):sigmaY-avg")
+{
+         field(DESC,"sigmaY avg value")
+         field(ALG, "Average")
+         field(NSAM,"1")
+         field(N,   "10")
+         field(INP, "$(CAM):sigmaY CP")
+         field(PINI,"YES")
+         field(PREC,"4")
+}
+
+record(ai,"$(CAM):dropframes"){
+        field(DESC,"actual FPS")
+        field(DTYP,"1394")
+        field(HOPR,"100")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @dropFrame")
+        field(FLNK,"$(CAM):afps")
+        field(PREC,"0")
+        field(UDF,"0")
+}
+
+record(ai,"$(CAM):afps"){
+        field(DESC,"actual FPS")
+        field(DTYP,"1394")
+        field(HOPR,"100")
+        field(LOPR,"0")
+        field(INP,"#C0 S0 @afps")
+        field(FLNK,"$(CAM):xp_cal")
+        field(PREC,"0")
+        field(UDF,"0")
+}
+
+
+record(ai,"$(CAM):scale"){
+        field(DESC,"scale")
+        field(HOPR,"1000000")
+        field(LOPR,"0")
+	field(VAL,"1")
+	field(PREC,"5")
+}
+
+record(ai,"$(CAM):offsetX"){
+        field(DESC,"offset")
+        field(HOPR,"1000000")
+        field(LOPR,"0")
+	field(VAL,"0")
+        field(PREC,"5")	
+}
+
+record(ai,"$(CAM):offsetY"){
+        field(DESC,"offset")
+        field(HOPR,"1000000")
+        field(LOPR,"0")
+        field(VAL,"0")
+        field(PREC,"5")
+}
+
+record(stringin,"$(CAM):unit"){
+        field(DESC,"unit")
+}
+
+###############################################################################
+#                                                                             #
+#                               MBBI                                          #
+#                                                                             #
+###############################################################################
+record(mbbi,"$(CAM):iso_status"){
+	field(DESC,"camera iso_status")
+	field(SCAN,"1 second")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @iso_status")
+	field(FLNK,"$(CAM):trigger_on_off")
+}
+
+record(mbbi,"$(CAM):trigger_on_off"){
+	field(DESC,"camera trigger_on_off")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @trigger_on_off")
+	field(FLNK,"$(CAM):trigger_polarity")
+}
+
+record(mbbi,"$(CAM):trigger_polarity"){
+	field(DESC,"camera trigger_polarity")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @trigger_polarity")
+	field(FLNK,"$(CAM):trigger_mode")
+}
+
+record(mbbi,"$(CAM):trigger_mode"){
+	field(DESC,"camera trigger_mode")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @trigger_mod")
+	field(FLNK,"$(CAM):framerate")
+}
+
+record(mbbi,"$(CAM):framerate"){
+	field(DESC,"camera framerate")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @framerate")
+	field(FLNK,"$(CAM):mode")
+}
+
+record(mbbi,"$(CAM):mode"){
+	field(DESC,"camera mode")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @mode")
+	field(FLNK,"$(CAM):format")
+}
+
+record(mbbi,"$(CAM):format"){
+	field(DESC,"camera format")
+	field(DTYP,"1394")
+	field(INP,"#C0 S0 @format")
+	field(FLNK,"$(CAM):invalid")
+}
+
+record(mbbi,"$(CAM):colorFilter"){
+        field(DESC,"camera bayer pattern")
+        field(DTYP,"1394")
+        field(INP,"#C0 S0 @pattern")
+        field(FLNK,"$(CAM):invalid")
+        field(PINI,"YES")
+}
+
+record(mbbi,"$(CAM):bayerConv"){
+        field(DESC,"Bayer conversion algorithm")
+        field(ZRST,"Near_Neighbor")
+        field(ONST,"Bayer_Simple")
+        field(TWST,"Bilinear")
+        field(THST,"HQLinear")
+        field(FRST,"Downsample")
+        field(FVST,"Edge_Sense")
+        field(PINI,"YES")
+}
+
+###############################################################################
+#                                                                             #
+#                               BI                                            #
+#                                                                             #
+###############################################################################
+record(bi,"$(CAM):invalid"){
+	field(DESC,"camera data validity")
+	field(ONAM,"INVALID")
+	field(ZNAM,"VALID")
+	field(VAL,"1")
+}
+
+
+###############################################################################
+#                                                                             #
+#                               MBBO                                          #
+#                                                                             #
+###############################################################################
+
+record(mbbo,"$(CAM):set_trigger_on_off"){
+	field(DESC,"set trigger_on_off")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @trigger_on_off")
+}
+
+#               bgs control(AA)
+
+record(mbbo,"$(CAM):bgs"){
+        field(DESC,"set bgs")
+        field(DTYP,"1394")
+        field(OUT,"#C0 S0 @bgs")
+}
+
+record(mbbo,"$(CAM):man_auto"){
+        field(DESC,"set man_auto")
+        field(DTYP,"1394")
+        field(OUT,"#C0 S0 @man_auto")
+	field(VAL,"0")
+}
+
+record(mbbo,"$(CAM):algorithm"){
+        field(DESC,"set algorithm")
+	field(NOBT,"8")
+	field(ZRVL,"0")
+        field(ONVL,"1")
+        field(ZRST,"Center of Mass")
+        field(ONST,"2D Gaussian Fit")	
+}
+
+record(mbbo,"$(CAM):set_trigger_mode"){
+	field(DESC,"set trigger_mode")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @trigger_mod")
+}
+
+record(mbbo,"$(CAM):set_trigger_polarity"){
+	field(DESC,"set trigger_polarity")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @trigger_polarity")
+}
+
+record(mbbo,"$(CAM):stopstart"){
+	field(DESC,"stop or start iso tx")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @stopstart")
+	field(RVAL,"1")
+	field(OMSL,"0")
+}
+
+record(mbbo,"$(CAM):set_format"){
+	field(DESC,"set camera format")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @format")
+}
+
+record(mbbo,"$(CAM):set_mode"){
+	field(DESC,"set camera mode")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @mode")
+}
+
+record(mbbo,"$(CAM):set_framerate"){
+	field(DESC,"set camera framerate")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @framerate")
+	field(RVAL,"34")
+	field(OMSL,"0")
+	field(PINI,"YES")
+}
+
+
+###############################################################################
+#                                                                             #
+#                               AO                                            #
+#                                                                             #
+###############################################################################
+
+record(ao,"$(CAM):set_threshold"){
+	field(DESC,"threshold")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @threshold")
+	field(HOPR,"1.5")
+	field(LOPR,"1.0")
+	field(PREC,"2")
+}
+
+record(ao,"$(CAM):set_low_thresh"){
+	field(DESC,"low_thresh")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @low_thresh")
+	field(HOPR,"255")
+	field(LOPR,"0")
+	field(PREC,"0")
+        field(UDF,"0")
+        field(PINI,"YES")
+}
+
+record(ao,"$(CAM):save"){
+	field(DESC,"save image")
+	field(HOPR,"10000")
+	field(LOPR,"0")
+	field(PREC,"1")
+}
+
+record(ao,"$(CAM):set_width"){
+	field(DESC,"camera width")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @width")
+	field(HOPR,"1024")
+	field(LOPR,"100")
+	field(PREC,"1")
+}
+
+record(ao,"$(CAM):set_height"){
+	field(DESC,"camera height")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @height")
+	field(HOPR,"768")
+	field(LOPR,"100")
+	field(PREC,"1")
+}
+
+record(ao,"$(CAM):set_woffset"){
+	field(DESC,"camera woffset")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @woffset")
+	field(HOPR,"924")
+	field(LOPR,"0")
+	field(PREC,"1")
+}
+
+record(ao,"$(CAM):set_hoffset"){
+	field(DESC,"camera hoffset")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @hoffset")
+	field(HOPR,"668")
+	field(LOPR,"0")
+	field(PREC,"1")
+}
+
+record(ao,"$(CAM):set_gain"){
+	field(DESC,"camera gain")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @gain")
+	field(HOPR,"300")
+	field(LOPR,"0")
+	field(PREC,"0")
+        field(UDF,"0")
+        field(PINI,"YES")
+}
+#		shutter control(AA)
+record(ao,"$(CAM):set_shutter"){
+        field(DESC,"camera shutter")
+        field(DTYP,"1394")
+        field(OUT,"#C0 S0 @shutter")
+        field(HOPR,"1000")
+        field(LOPR,"0")
+        field(PREC,"0")
+        field(UDF,"0")
+        field(PINI,"YES")
+        field(FLNK,"$(CAM):shutter")
+}
+
+record(ao,"$(CAM):set_exposure"){
+	field(DESC,"camera exposure")
+	field(DTYP,"1394")
+	field(OUT,"#C0 S0 @exposure")
+	field(HOPR,"500")
+	field(LOPR,"0")
+	field(PREC,"0")
+}
+
+record(ao,"$(CAM):ext_sCol"){
+        field(DESC,"external sCol")
+        field(DTYP,"1394")
+        field(OUT,"#C0 S0 @ext_sCol")
+        field(LOPR,"0")
+        field(PREC,"0")
+	field(PINI,"YES")
+}
+
+record(ao,"$(CAM):ext_eCol"){
+        field(DESC,"external eCol")
+        field(DTYP,"1394")
+        field(OUT,"#C0 S0 @ext_eCol")
+        field(LOPR,"0")
+        field(PREC,"0")
+	field(PINI,"YES")
+}
+
+record(ao,"$(CAM):ext_sLine"){
+        field(DESC,"external sLine")
+        field(DTYP,"1394")
+        field(OUT,"#C0 S0 @ext_sLine")
+        field(LOPR,"0")
+        field(PREC,"0")
+        field(PINI,"YES")
+}
+
+record(ao,"$(CAM):ext_eLine"){
+        field(DESC,"external eLine")
+        field(DTYP,"1394")
+        field(OUT,"#C0 S0 @ext_eLine")
+        field(LOPR,"0")
+        field(PREC,"0")
+        field(PINI,"YES")
+}
+
+###############################################################################
+#                                                                             #
+#                               CALC                                          #
+#                                                                             #
+###############################################################################
+
+record(calcout,"$(CAM):xp_cal"){
+        field(DESC,"horz beam pos cal")
+	field(INPA,"$(CAM):xp-avg")
+        field(INPB,"$(CAM):scale")
+        field(INPC,"$(CAM):offsetX")
+        field(CALC,"(A*B)+C")
+        field(PREC,"4")
+        field(FLNK,"$(CAM):xw_cal")
+}
+
+record(calcout,"$(CAM):xw_cal"){
+        field(DESC,"horz beam width cal")
+        field(INPA,"$(CAM):xw-avg")
+        field(INPB,"$(CAM):scale")
+        field(CALC,"(A*B)")
+        field(PREC,"4")
+        field(FLNK,"$(CAM):yp_cal")
+}
+
+record(calcout,"$(CAM):yp_cal"){
+        field(DESC,"ver beam pos cal")
+        field(INPA,"$(CAM):yp-avg")
+        field(INPB,"$(CAM):scale")
+        field(INPC,"$(CAM):offsetY")
+        field(CALC,"(A*B)+C")
+        field(PREC,"4")
+        field(FLNK,"$(CAM):yw_cal")
+}
+
+record(calcout,"$(CAM):yw_cal"){
+        field(DESC,"ver beam width cal")
+        field(INPA,"$(CAM):yw-avg")
+        field(INPB,"$(CAM):scale")
+        field(CALC,"(A*B)")
+        field(PREC,"4")
+}
+

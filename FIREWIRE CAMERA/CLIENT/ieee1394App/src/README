@@ -1,0 +1,14 @@
+To compile firewire program do as following:
+1. verify the path to EPICS 3.14[.7] in ../../setup.sh
+2. source the ../../setup.sh
+   example:	
+   . ../../setup.sh
+3. make -f MakefileApp
+
+To start the firewire application do es following:
+
+1. Set correctly LD_LIBRARY_PATH variable to point o epics 3.14[.7]
+  example:	
+	export LD_LIBRARY_PATH=~dach/EPICS3.14.7/base-3.14.7/lib/linux-x86/:$LD_LIBRARY_PATH
+2. start the client application by typing:
+   firewire.sh <EPICS camera device name>

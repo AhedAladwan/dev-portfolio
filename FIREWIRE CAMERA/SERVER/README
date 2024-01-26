@@ -1,0 +1,16 @@
+
+This epics (https://epics.anl.gov) server communiactes with a DCAM (IIDC) specifications compatible firewire camera as the follwoing:
+
+At the user space:
+*libdc1394 version < 2.0 (usually installed under /usr/local/lib)
+*libraw1394 version =< 1.1 (usually installed under /usr/local/lib)
+*EPICS 3.14.7 base.
+
+At the Kernel space:
+*raw1394 (kernel module) (all linux kernels above 2.3.4 have this module built in)
+*ieee1394 (kernel module) (all kernel above 2.3.4 have this module built in)
+*ohci1394 (kernel module) (all kernel above 2.3.4 have this module built in)
+*video1394 (kernel module) (all kernel above 2.3.4 have this module built in)
+
+At the interface card:
+The card has to be OHCI specifications compatible.

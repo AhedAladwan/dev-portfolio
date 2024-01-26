@@ -1,0 +1,6 @@
+device(ai,VME_IO,devAi1394,"1394")
+device(ao,VME_IO,devAo1394,"1394")
+device(stringin,VME_IO,devStringin1394,"1394")
+device(waveform,VME_IO,devWaveform1394,"1394")
+device(mbbi,VME_IO,devMbbi1394,"1394")
+device(mbbo,VME_IO,devMbbo1394,"1394")

@@ -1,0 +1,7 @@
+# save/restore V4.6	Automatically generated - DO NOT MODIFY - 051104-161637
+GTEST-PC-CCD:set_gain 500
+GTEST-PC-CCD:set_low_thresh 1
+GTEST-PC-CCD:set_shutter 500
+GTEST-PC-CCD:avg-samp 100
+GTEST-PC-CCD:set_framerate 3
+<END>

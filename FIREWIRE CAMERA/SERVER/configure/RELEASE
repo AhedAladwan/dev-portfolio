@@ -1,0 +1,25 @@
+#RELEASE Location of external products
+# Run "gnumake clean uninstall install" in the application
+# top directory each time this file is changed.
+
+TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+
+# If you don't want to install into $(TOP) then
+# define INSTALL_LOCATION_APP here
+INSTALL_LOCATION_APP=/usr/local/ccd1394
+
+#If using the sequencer, point SNCSEQ at its top directory:
+#SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
+
+#EPICS_BASE usually appears last so other apps can override stuff:
+#EPICS_BASE=/home/hunt/tmp/PROJECTS/subsystems/TEST/SMH/redhat/BUILD/base-3.14.4
+#EPICS_BASE=/home/sh/Epics/base-3.14.4
+#EPICS_BASE=/afs/psi.ch/user/h/hunt/tmp/PROJECTS/subsystems/TEST/SMH/redhat/BUILD/base-3.14.4
+# forget the above lines!
+# login to slslc02 and use next line
+EPICS_BASE=/usr/local/epics/base-3.14.8
+# save_restore
+AUTOSAVE=/root/SLIM/autoSR/4-1
+#Capfast users may need the following definitions
+#CAPFAST_TEMPLATES=
+#SCH2EDIF_PATH=

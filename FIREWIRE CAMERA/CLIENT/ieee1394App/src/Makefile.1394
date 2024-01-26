@@ -1,0 +1,17 @@
+
+TARGETS = firewire camera_info grab_gray_image grab_yuv_image red2ppm write_yuv_file yuvtoppm showppm
+
+CFLAGS = -DUNIX  -I /usr/X11R6/include -I $(EPICS_BASE)/include -I $(EPICS_BASE)/include/os/Linux
+
+#MOTIF_LIBS = -L/usr/X11R6/lib -lMrm -lX11  -lXm -lXt -lXp -lXext  -lXaw -lSM -lICE
+
+#EPICS_LIBS = -L $(EPICS_BASE)/lib/linux-x86 -lca -lCom 
+
+FIREWIRE_LIBS = -L /usr/local/lib -lraw1394 -ldc1394_control
+
+LDFLAGS = $(FIREWIRE_LIBS) $(EPICS_LIBS) $(MOTIF_LIBS)
+
+all : $(TARGETS)
+
+clean : 
+	rm -f $(TARGETS)

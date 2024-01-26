@@ -1,0 +1,9 @@
+/sbin/rmmod video1394
+/sbin/rmmod raw1394
+/sbin/rmmod ohci1394
+/sbin/rmmod ieee1394
+sleep 5
+/sbin/insmod ieee1394 
+/sbin/insmod ohci1394 
+/sbin/insmod raw1394
+/sbin/insmod video1394

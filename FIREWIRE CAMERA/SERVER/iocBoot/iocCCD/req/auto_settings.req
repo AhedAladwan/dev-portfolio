@@ -1,0 +1,6 @@
+GTEST-PC-CCD:set_gain
+GTEST-PC-CCD:set_low_thresh
+GTEST-PC-CCD:set_shutter
+GTEST-PC-CCD:avg-samp
+GTEST-PC-CCD:set_framerate
+#adwan-test-ai0

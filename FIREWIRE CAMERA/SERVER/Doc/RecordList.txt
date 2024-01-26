@@ -1,0 +1,80 @@
+Record Names in IEEE1394/iocBoot/pc5202/ez-test.db (9.11.2004 ez)
+=====================================================================
+
+Modifications made from test.db to ez-test.db:
+test.db                        ez-test.db
+-----------------------------------------------------------
+Macro name $(CAM)           -> Macro name $(CAMERA)
+$(CAM):threshold            -> $(CAMERA):thresh
+$(CAM):set_threshold        -> $(CAMERA):set_thresh
+$(CAM):low_thresh           -> $(CAMERA):low_thr
+$(CAM):set_low_thresh       -> $(CAMERA):set_low_thr
+$(CAM):trigger_on_off       -> $(CAMERA):trg_on_off
+$(CAM):set_trigger_on_off   -> $(CAMERA):sw_trg
+$(CAM):trigger_polarity     -> $(CAMERA):trg_pol
+$(CAM):set_trigger_polarity -> $(CAMERA):set_trg_pol
+$(CAM):trigger_mode         -> $(CAMERA):trg_mod
+$(CAM):set_trigger_mode     -> $(CAMERA):set_trg_mod
+$(CAM):framerate            -> $(CAMERA):frame
+$(CAM):set_framerate        -> $(CAMERA):set_frame
+
+
+The macro $(CAMERA) can be 16 characters long (in accordance with the
+SLS naming convention).
+
+
+Record Name             Description
+-------------------------------------------------------------------------
+$(CAMERA):bpp           bytes per pixel
+$(CAMERA):brightness    
+$(CAMERA):code          encoding
+$(CAMERA):data          raw picture data
+$(CAMERA):exposure      
+$(CAMERA):format        camera format (e.g. SVGA_NONCOMPESSED)
+$(CAMERA):set_format    set camera format
+$(CAMERA):frame         camera framerate
+$(CAMERA):set_frame     set camera framerate
+$(CAMERA):gain          
+$(CAMERA):height        heigth of the image part of interest
+$(CAMERA):set_height    set heigth of the image part
+$(CAMERA):hoffset       vertical start of the image part of interest
+$(CAMERA):set_hoffset   set vertical start of the image part
+$(CAMERA):invalid       camera data validity (0=INVALID/1=VALID)
+$(CAMERA):iso_status    
+$(CAMERA):low_thr       level which is substracted from intensity
+$(CAMERA):set_low_thr   set threshold level (substracted from intensity)
+$(CAMERA):mode          camera mode
+$(CAMERA):set_mode      set camera mode
+$(CAMERA):model         type of camera
+$(CAMERA):numCameras    
+$(CAMERA):numNodes      
+$(CAMERA):save          save image
+$(CAMERA):size          
+$(CAMERA):stopstart     stop or start iso tx
+$(CAMERA):sw_version    software version
+$(CAMERA):thresh        no readback!!!!!!!!!!!!!!
+$(CAMERA):set_thresh    ???? does something - not jet clear ????
+$(CAMERA):trg_mod       trigger mode
+$(CAMERA):set_trg_mod   set trigger mode
+$(CAMERA):trg_on_off    camera trigger on/off
+$(CAMERA):sw_trg        set camera trigger on/off
+$(CAMERA):trg_pol       camera trigger polarity (positive/negative)
+$(CAMERA):set_trg_pol   set trigger polarity (positive/negative)
+$(CAMERA):vendor        company who build the camera
+$(CAMERA):width         width of the image part of interest
+$(CAMERA):set_width     set width of the image part
+$(CAMERA):woffset       horizontal start of the image part of interest
+$(CAMERA):set_woffset   set horizontal start of the image part
+$(CAMERA):xavg          X Average
+$(CAMERA):xdist         sum of each column
+$(CAMERA):xp            horizontal beam position (in pixel)
+$(CAMERA):xsn           X signal to noise ratio
+$(CAMERA):xw            horizontal beam width
+$(CAMERA):yavg          Y Average
+$(CAMERA):ydist         sum of each row
+$(CAMERA):yp            vertical beam position (in pixel)
+$(CAMERA):ysn           Y signal to noise ratio
+$(CAMERA):yw            vertical beam width
+
+
+

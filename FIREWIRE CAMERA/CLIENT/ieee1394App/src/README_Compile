@@ -1,0 +1,9 @@
+To compile firewire do as following:
+
+make -f MakefileApp firewire
+
+cc -L /usr/local/lib -lraw1394 -ldc1394_control -L /root/SLS-VIDEO/base-3.14.7//lib/linux-x86 -lca -lCom  -L/usr/X11R6/lib -lMrm -lX11  -lXm -lXt -lXp -lXext  -lXaw -lSM -lICE  firewire.o  dc1394_bayer.o -o firewire
+
+To start firewire do as following:
+
+firewire.sh MTEST-MIREK

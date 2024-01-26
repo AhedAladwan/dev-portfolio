@@ -1,0 +1,1038 @@
+# autosave R5.0	Automatically generated - DO NOT MODIFY - 130725-124558
+ARGUS:cam1:Offset 23
+ARGUS:cam1:LineRate 2000
+ARGUS:cam1:ActiveSignal 0
+ARGUS:cam1:DataType 1
+ARGUS:cam1:ColorMode 0
+ARGUS:cam1:BinX 1
+ARGUS:cam1:BinY 1
+ARGUS:cam1:MinX 0
+ARGUS:cam1:MinY 0
+ARGUS:cam1:SizeX 1
+ARGUS:cam1:SizeY 128
+ARGUS:cam1:ReverseX 0
+ARGUS:cam1:ReverseY 0
+ARGUS:cam1:AcquireTime 1
+ARGUS:cam1:AcquirePeriod 0
+ARGUS:cam1:Gain 1
+ARGUS:cam1:FrameType 0
+ARGUS:cam1:ImageMode 0
+ARGUS:cam1:TriggerMode 1
+ARGUS:cam1:NumExposures 1
+ARGUS:cam1:NumImages 1
+ARGUS:cam1:ArrayCallbacks 0
+ARGUS:cam1:ShutterMode 0
+ARGUS:cam1:ShutterOpenDelay 0
+ARGUS:cam1:ShutterCloseDelay 0
+ARGUS:cam1:ShutterOpenEPICS.OUT 
+ARGUS:cam1:ShutterCloseEPICS.OUT 
+ARGUS:cam1:ShutterOpenEPICS.OCAL 1
+ARGUS:cam1:ShutterCloseEPICS.OCAL 0
+ARGUS:cam1:ShutterStatusEPICS_RBV.INP test CP MS
+ARGUS:cam1:ShutterStatusEPICS_RBV.ZRVL 0
+ARGUS:cam1:ShutterStatusEPICS_RBV.ONVL 1
+ARGUS:cam1:Temperature 25
+ARGUS:cam1:ReadStatus.SCAN 0
+ARGUS:cam1:NDAttributesFile 
+ARGUS:cam1:FilePath 
+ARGUS:cam1:FileName 
+ARGUS:cam1:FileNumber 1
+ARGUS:cam1:AutoIncrement 1
+ARGUS:cam1:FileTemplate 
+ARGUS:cam1:AutoSave 1
+ARGUS:cam1:FileFormat 0
+ARGUS:cam1:FileWriteMode 0
+ARGUS:cam1:NumCapture 1
+ARGUS:cam1:DeleteDriverFile 0
+ARGUS:image1:NDArrayPort argusTel
+ARGUS:image1:NDArrayAddress 0
+ARGUS:image1:EnableCallbacks 0
+ARGUS:image1:MinCallbackTime 0
+ARGUS:image1:BlockingCallbacks 0
+ARGUS:image1:NDAttributesFile 
+ARGUS:netCDF1:NDArrayPort argusTel
+ARGUS:netCDF1:NDArrayAddress 0
+ARGUS:netCDF1:EnableCallbacks 0
+ARGUS:netCDF1:MinCallbackTime 0
+ARGUS:netCDF1:BlockingCallbacks 0
+ARGUS:netCDF1:NDAttributesFile 
+ARGUS:netCDF1:FilePath 
+ARGUS:netCDF1:FileName 
+ARGUS:netCDF1:FileNumber 1
+ARGUS:netCDF1:AutoIncrement 1
+ARGUS:netCDF1:FileTemplate 
+ARGUS:netCDF1:AutoSave 1
+ARGUS:netCDF1:FileFormat 0
+ARGUS:netCDF1:FileWriteMode 0
+ARGUS:netCDF1:NumCapture 1
+ARGUS:netCDF1:DeleteDriverFile 0
+ARGUS:TIFF1:NDArrayPort argusTel
+ARGUS:TIFF1:NDArrayAddress 0
+ARGUS:TIFF1:EnableCallbacks 0
+ARGUS:TIFF1:MinCallbackTime 0
+ARGUS:TIFF1:BlockingCallbacks 0
+ARGUS:TIFF1:NDAttributesFile 
+ARGUS:TIFF1:FilePath 
+ARGUS:TIFF1:FileName 
+ARGUS:TIFF1:FileNumber 1
+ARGUS:TIFF1:AutoIncrement 1
+ARGUS:TIFF1:FileTemplate 
+ARGUS:TIFF1:AutoSave 1
+ARGUS:TIFF1:FileFormat 0
+ARGUS:TIFF1:FileWriteMode 0
+ARGUS:TIFF1:NumCapture 1
+ARGUS:TIFF1:DeleteDriverFile 0
+ARGUS:JPEG1:NDArrayPort argusTel
+ARGUS:JPEG1:NDArrayAddress 0
+ARGUS:JPEG1:EnableCallbacks 0
+ARGUS:JPEG1:MinCallbackTime 0
+ARGUS:JPEG1:BlockingCallbacks 0
+ARGUS:JPEG1:NDAttributesFile 
+ARGUS:JPEG1:FilePath 
+ARGUS:JPEG1:FileName 
+ARGUS:JPEG1:FileNumber 1
+ARGUS:JPEG1:AutoIncrement 1
+ARGUS:JPEG1:FileTemplate 
+ARGUS:JPEG1:AutoSave 1
+ARGUS:JPEG1:FileFormat 0
+ARGUS:JPEG1:FileWriteMode 0
+ARGUS:JPEG1:NumCapture 1
+ARGUS:JPEG1:DeleteDriverFile 0
+ARGUS:JPEG1:JPEGQuality 50
+ARGUS:Nexus1:NDArrayPort argusTel
+ARGUS:Nexus1:NDArrayAddress 0
+ARGUS:Nexus1:EnableCallbacks 0
+ARGUS:Nexus1:MinCallbackTime 0
+ARGUS:Nexus1:BlockingCallbacks 0
+ARGUS:Nexus1:NDAttributesFile 
+ARGUS:Nexus1:FilePath 
+ARGUS:Nexus1:FileName 
+ARGUS:Nexus1:FileNumber 1
+ARGUS:Nexus1:AutoIncrement 1
+ARGUS:Nexus1:FileTemplate 
+ARGUS:Nexus1:AutoSave 1
+ARGUS:Nexus1:FileFormat 0
+ARGUS:Nexus1:FileWriteMode 0
+ARGUS:Nexus1:NumCapture 1
+ARGUS:Nexus1:DeleteDriverFile 0
+ARGUS:Nexus1:TemplateFilePath 
+ARGUS:Nexus1:TemplateFileName 
+ARGUS:Magick1:NDArrayPort argusTel
+ARGUS:Magick1:NDArrayAddress 0
+ARGUS:Magick1:EnableCallbacks 0
+ARGUS:Magick1:MinCallbackTime 0
+ARGUS:Magick1:BlockingCallbacks 0
+ARGUS:Magick1:NDAttributesFile 
+ARGUS:Magick1:FilePath 
+ARGUS:Magick1:FileName 
+ARGUS:Magick1:FileNumber 1
+ARGUS:Magick1:AutoIncrement 1
+ARGUS:Magick1:FileTemplate 
+ARGUS:Magick1:AutoSave 1
+ARGUS:Magick1:FileFormat 0
+ARGUS:Magick1:FileWriteMode 0
+ARGUS:Magick1:NumCapture 1
+ARGUS:Magick1:DeleteDriverFile 0
+ARGUS:Magick1:Quality 100
+ARGUS:Magick1:CompressType 0
+ARGUS:Magick1:BitDepth 0
+ARGUS:HDF1:NDArrayPort argusTel
+ARGUS:HDF1:NDArrayAddress 0
+ARGUS:HDF1:EnableCallbacks 0
+ARGUS:HDF1:MinCallbackTime 0
+ARGUS:HDF1:BlockingCallbacks 0
+ARGUS:HDF1:NDAttributesFile 
+ARGUS:HDF1:FilePath 
+ARGUS:HDF1:FileName 
+ARGUS:HDF1:FileNumber 1
+ARGUS:HDF1:AutoIncrement 1
+ARGUS:HDF1:FileTemplate 
+ARGUS:HDF1:AutoSave 1
+ARGUS:HDF1:FileFormat 0
+ARGUS:HDF1:FileWriteMode 0
+ARGUS:HDF1:NumCapture 1
+ARGUS:HDF1:DeleteDriverFile 0
+ARGUS:HDF1:NumRowChunks 0
+ARGUS:HDF1:NumColChunks 0
+ARGUS:HDF1:NumFramesChunks 0
+ARGUS:HDF1:NumFramesFlush 0
+ARGUS:HDF1:Compression 0
+ARGUS:HDF1:NumDataBits 8
+ARGUS:HDF1:DataBitsOffset 0
+ARGUS:HDF1:SZipNumPixels 16
+ARGUS:HDF1:ZLevel 6
+ARGUS:HDF1:StorePerform 1
+ARGUS:HDF1:StoreAttr 1
+ARGUS:HDF1:NumExtraDims 0
+ARGUS:HDF1:ExtraDimSizeN 1
+ARGUS:HDF1:ExtraDimSizeX 1
+ARGUS:HDF1:ExtraDimSizeY 1
+ARGUS:ROI1:NDArrayPort argusTel
+ARGUS:ROI1:NDArrayAddress 0
+ARGUS:ROI1:EnableCallbacks 0
+ARGUS:ROI1:MinCallbackTime 0
+ARGUS:ROI1:BlockingCallbacks 0
+ARGUS:ROI1:NDAttributesFile 
+ARGUS:ROI1:Name 
+ARGUS:ROI1:DataTypeOut 8
+ARGUS:ROI1:BinX 1
+ARGUS:ROI1:BinY 1
+ARGUS:ROI1:BinZ 1
+ARGUS:ROI1:MinX 0
+ARGUS:ROI1:MinY 0
+ARGUS:ROI1:MinZ 0
+ARGUS:ROI1:SizeX 1000000
+ARGUS:ROI1:SizeY 1000000
+ARGUS:ROI1:SizeZ 1000000
+ARGUS:ROI1:ReverseX 0
+ARGUS:ROI1:ReverseY 0
+ARGUS:ROI1:ReverseZ 0
+ARGUS:ROI1:EnableX 1
+ARGUS:ROI1:EnableY 1
+ARGUS:ROI1:EnableZ 1
+ARGUS:ROI1:EnableScale 0
+ARGUS:ROI1:Scale 1
+ARGUS:ROI2:NDArrayPort argusTel
+ARGUS:ROI2:NDArrayAddress 0
+ARGUS:ROI2:EnableCallbacks 0
+ARGUS:ROI2:MinCallbackTime 0
+ARGUS:ROI2:BlockingCallbacks 0
+ARGUS:ROI2:NDAttributesFile 
+ARGUS:ROI2:Name 
+ARGUS:ROI2:DataTypeOut 8
+ARGUS:ROI2:BinX 1
+ARGUS:ROI2:BinY 1
+ARGUS:ROI2:BinZ 1
+ARGUS:ROI2:MinX 0
+ARGUS:ROI2:MinY 0
+ARGUS:ROI2:MinZ 0
+ARGUS:ROI2:SizeX 1000000
+ARGUS:ROI2:SizeY 1000000
+ARGUS:ROI2:SizeZ 1000000
+ARGUS:ROI2:ReverseX 0
+ARGUS:ROI2:ReverseY 0
+ARGUS:ROI2:ReverseZ 0
+ARGUS:ROI2:EnableX 1
+ARGUS:ROI2:EnableY 1
+ARGUS:ROI2:EnableZ 1
+ARGUS:ROI2:EnableScale 0
+ARGUS:ROI2:Scale 1
+ARGUS:ROI3:NDArrayPort argusTel
+ARGUS:ROI3:NDArrayAddress 0
+ARGUS:ROI3:EnableCallbacks 0
+ARGUS:ROI3:MinCallbackTime 0
+ARGUS:ROI3:BlockingCallbacks 0
+ARGUS:ROI3:NDAttributesFile 
+ARGUS:ROI3:Name 
+ARGUS:ROI3:DataTypeOut 8
+ARGUS:ROI3:BinX 1
+ARGUS:ROI3:BinY 1
+ARGUS:ROI3:BinZ 1
+ARGUS:ROI3:MinX 0
+ARGUS:ROI3:MinY 0
+ARGUS:ROI3:MinZ 0
+ARGUS:ROI3:SizeX 1000000
+ARGUS:ROI3:SizeY 1000000
+ARGUS:ROI3:SizeZ 1000000
+ARGUS:ROI3:ReverseX 0
+ARGUS:ROI3:ReverseY 0
+ARGUS:ROI3:ReverseZ 0
+ARGUS:ROI3:EnableX 1
+ARGUS:ROI3:EnableY 1
+ARGUS:ROI3:EnableZ 1
+ARGUS:ROI3:EnableScale 0
+ARGUS:ROI3:Scale 1
+ARGUS:ROI4:NDArrayPort argusTel
+ARGUS:ROI4:NDArrayAddress 0
+ARGUS:ROI4:EnableCallbacks 0
+ARGUS:ROI4:MinCallbackTime 0
+ARGUS:ROI4:BlockingCallbacks 0
+ARGUS:ROI4:NDAttributesFile 
+ARGUS:ROI4:Name 
+ARGUS:ROI4:DataTypeOut 8
+ARGUS:ROI4:BinX 1
+ARGUS:ROI4:BinY 1
+ARGUS:ROI4:BinZ 1
+ARGUS:ROI4:MinX 0
+ARGUS:ROI4:MinY 0
+ARGUS:ROI4:MinZ 0
+ARGUS:ROI4:SizeX 1000000
+ARGUS:ROI4:SizeY 1000000
+ARGUS:ROI4:SizeZ 1000000
+ARGUS:ROI4:ReverseX 0
+ARGUS:ROI4:ReverseY 0
+ARGUS:ROI4:ReverseZ 0
+ARGUS:ROI4:EnableX 1
+ARGUS:ROI4:EnableY 1
+ARGUS:ROI4:EnableZ 1
+ARGUS:ROI4:EnableScale 0
+ARGUS:ROI4:Scale 1
+ARGUS:Proc1:NDArrayPort argusTel
+ARGUS:Proc1:NDArrayAddress 0
+ARGUS:Proc1:EnableCallbacks 0
+ARGUS:Proc1:MinCallbackTime 0
+ARGUS:Proc1:BlockingCallbacks 0
+ARGUS:Proc1:NDAttributesFile 
+ARGUS:Proc1:DataTypeOut 8
+ARGUS:Proc1:EnableBackground 0
+ARGUS:Proc1:EnableFlatField 0
+ARGUS:Proc1:ScaleFlatField 255
+ARGUS:Proc1:EnableOffsetScale 0
+ARGUS:Proc1:Offset 0
+ARGUS:Proc1:Scale 1
+ARGUS:Proc1:EnableLowClip 0
+ARGUS:Proc1:LowClip 0
+ARGUS:Proc1:EnableHighClip 0
+ARGUS:Proc1:HighClip 100
+ARGUS:Proc1:EnableFilter 0
+ARGUS:Proc1:AutoResetFilter 0
+ARGUS:Proc1:FilterCallbacks 0
+ARGUS:Proc1:NumFilter 1
+ARGUS:Proc1:FilterType 0
+ARGUS:Proc1:OOffset 0
+ARGUS:Proc1:OScale 1
+ARGUS:Proc1:OC1 1
+ARGUS:Proc1:OC2 -1
+ARGUS:Proc1:OC3 0
+ARGUS:Proc1:OC4 1
+ARGUS:Proc1:FOffset 0
+ARGUS:Proc1:FScale 1
+ARGUS:Proc1:FC1 1
+ARGUS:Proc1:FC2 -1
+ARGUS:Proc1:FC3 0
+ARGUS:Proc1:FC4 1
+ARGUS:Proc1:ROffset 0
+ARGUS:Proc1:RC1 0
+ARGUS:Proc1:RC2 1
+ARGUS:Stats1:NDArrayPort ROI1
+ARGUS:Stats1:NDArrayAddress 0
+ARGUS:Stats1:EnableCallbacks 0
+ARGUS:Stats1:MinCallbackTime 0
+ARGUS:Stats1:BlockingCallbacks 0
+ARGUS:Stats1:NDAttributesFile 
+ARGUS:Stats1:BgdWidth 1
+ARGUS:Stats1:ComputeStatistics 1
+ARGUS:Stats1:ComputeCentroid 0
+ARGUS:Stats1:CentroidThreshold 1
+ARGUS:Stats1:ComputeProfiles 0
+ARGUS:Stats1:CursorX 256
+ARGUS:Stats1:CursorY 256
+ARGUS:Stats1:ComputeHistogram 0
+ARGUS:Stats1:HistSize 256
+ARGUS:Stats1:HistMin 0
+ARGUS:Stats1:HistMax 255
+ARGUS:Stats1:TSNumPoints 2048
+ARGUS:Stats1:TSRead.SCAN 6
+ARGUS:Stats2:NDArrayPort ROI2
+ARGUS:Stats2:NDArrayAddress 0
+ARGUS:Stats2:EnableCallbacks 0
+ARGUS:Stats2:MinCallbackTime 0
+ARGUS:Stats2:BlockingCallbacks 0
+ARGUS:Stats2:NDAttributesFile 
+ARGUS:Stats2:BgdWidth 1
+ARGUS:Stats2:ComputeStatistics 1
+ARGUS:Stats2:ComputeCentroid 0
+ARGUS:Stats2:CentroidThreshold 1
+ARGUS:Stats2:ComputeProfiles 0
+ARGUS:Stats2:CursorX 256
+ARGUS:Stats2:CursorY 256
+ARGUS:Stats2:ComputeHistogram 0
+ARGUS:Stats2:HistSize 256
+ARGUS:Stats2:HistMin 0
+ARGUS:Stats2:HistMax 255
+ARGUS:Stats2:TSNumPoints 2048
+ARGUS:Stats2:TSRead.SCAN 6
+ARGUS:Stats3:NDArrayPort ROI3
+ARGUS:Stats3:NDArrayAddress 0
+ARGUS:Stats3:EnableCallbacks 0
+ARGUS:Stats3:MinCallbackTime 0
+ARGUS:Stats3:BlockingCallbacks 0
+ARGUS:Stats3:NDAttributesFile 
+ARGUS:Stats3:BgdWidth 1
+ARGUS:Stats3:ComputeStatistics 1
+ARGUS:Stats3:ComputeCentroid 0
+ARGUS:Stats3:CentroidThreshold 1
+ARGUS:Stats3:ComputeProfiles 0
+ARGUS:Stats3:CursorX 256
+ARGUS:Stats3:CursorY 256
+ARGUS:Stats3:ComputeHistogram 0
+ARGUS:Stats3:HistSize 256
+ARGUS:Stats3:HistMin 0
+ARGUS:Stats3:HistMax 255
+ARGUS:Stats3:TSNumPoints 2048
+ARGUS:Stats3:TSRead.SCAN 6
+ARGUS:Stats4:NDArrayPort ROI4
+ARGUS:Stats4:NDArrayAddress 0
+ARGUS:Stats4:EnableCallbacks 0
+ARGUS:Stats4:MinCallbackTime 0
+ARGUS:Stats4:BlockingCallbacks 0
+ARGUS:Stats4:NDAttributesFile 
+ARGUS:Stats4:BgdWidth 1
+ARGUS:Stats4:ComputeStatistics 1
+ARGUS:Stats4:ComputeCentroid 0
+ARGUS:Stats4:CentroidThreshold 1
+ARGUS:Stats4:ComputeProfiles 0
+ARGUS:Stats4:CursorX 256
+ARGUS:Stats4:CursorY 256
+ARGUS:Stats4:ComputeHistogram 0
+ARGUS:Stats4:HistSize 256
+ARGUS:Stats4:HistMin 0
+ARGUS:Stats4:HistMax 255
+ARGUS:Stats4:TSNumPoints 2048
+ARGUS:Stats4:TSRead.SCAN 6
+ARGUS:Stats5:NDArrayPort argusTel
+ARGUS:Stats5:NDArrayAddress 0
+ARGUS:Stats5:EnableCallbacks 0
+ARGUS:Stats5:MinCallbackTime 0
+ARGUS:Stats5:BlockingCallbacks 0
+ARGUS:Stats5:NDAttributesFile 
+ARGUS:Stats5:BgdWidth 1
+ARGUS:Stats5:ComputeStatistics 1
+ARGUS:Stats5:ComputeCentroid 0
+ARGUS:Stats5:CentroidThreshold 1
+ARGUS:Stats5:ComputeProfiles 0
+ARGUS:Stats5:CursorX 256
+ARGUS:Stats5:CursorY 256
+ARGUS:Stats5:ComputeHistogram 0
+ARGUS:Stats5:HistSize 256
+ARGUS:Stats5:HistMin 0
+ARGUS:Stats5:HistMax 255
+ARGUS:Stats5:TSNumPoints 2048
+ARGUS:Stats5:TSRead.SCAN 6
+ARGUS:Trans1:NDArrayPort argusTel
+ARGUS:Trans1:NDArrayAddress 0
+ARGUS:Trans1:EnableCallbacks 0
+ARGUS:Trans1:MinCallbackTime 0
+ARGUS:Trans1:BlockingCallbacks 0
+ARGUS:Trans1:NDAttributesFile 
+ARGUS:Trans1:Name 
+ARGUS:Trans1:Type1 0
+ARGUS:Trans1:Type2 0
+ARGUS:Trans1:Type3 0
+ARGUS:Trans1:Type4 0
+ARGUS:Trans1:OriginLocation 0
+ARGUS:Over1:NDArrayPort argusTel
+ARGUS:Over1:NDArrayAddress 0
+ARGUS:Over1:EnableCallbacks 0
+ARGUS:Over1:MinCallbackTime 0
+ARGUS:Over1:BlockingCallbacks 0
+ARGUS:Over1:NDAttributesFile 
+ARGUS:Over1:1:Name ROI1
+ARGUS:Over1:1:Use 0
+ARGUS:Over1:1:PositionXLink.DOL ARGUS:ROI1:MinX_RBV CP MS
+ARGUS:Over1:1:PositionX 0
+ARGUS:Over1:1:PositionYLink.DOL ARGUS:ROI1:MinY_RBV CP MS
+ARGUS:Over1:1:PositionY 0
+ARGUS:Over1:1:SizeXLink.DOL ARGUS:ROI1:SizeX_RBV CP MS
+ARGUS:Over1:1:SizeX 1000000
+ARGUS:Over1:1:SizeYLink.DOL ARGUS:ROI1:SizeY_RBV CP MS
+ARGUS:Over1:1:SizeY 1000000
+ARGUS:Over1:1:DrawMode 0
+ARGUS:Over1:1:Shape 1
+ARGUS:Over1:1:Red 1
+ARGUS:Over1:1:Green 1
+ARGUS:Over1:1:Blue 1
+ARGUS:Over1:2:Name ROI2
+ARGUS:Over1:2:Use 0
+ARGUS:Over1:2:PositionXLink.DOL ARGUS:ROI2:MinX_RBV CP MS
+ARGUS:Over1:2:PositionX 0
+ARGUS:Over1:2:PositionYLink.DOL ARGUS:ROI2:MinY_RBV CP MS
+ARGUS:Over1:2:PositionY 0
+ARGUS:Over1:2:SizeXLink.DOL ARGUS:ROI2:SizeX_RBV CP MS
+ARGUS:Over1:2:SizeX 1000000
+ARGUS:Over1:2:SizeYLink.DOL ARGUS:ROI2:SizeY_RBV CP MS
+ARGUS:Over1:2:SizeY 1000000
+ARGUS:Over1:2:DrawMode 0
+ARGUS:Over1:2:Shape 1
+ARGUS:Over1:2:Red 1
+ARGUS:Over1:2:Green 1
+ARGUS:Over1:2:Blue 1
+ARGUS:Over1:3:Name ROI3
+ARGUS:Over1:3:Use 0
+ARGUS:Over1:3:PositionXLink.DOL ARGUS:ROI3:MinX_RBV CP MS
+ARGUS:Over1:3:PositionX 0
+ARGUS:Over1:3:PositionYLink.DOL ARGUS:ROI3:MinY_RBV CP MS
+ARGUS:Over1:3:PositionY 0
+ARGUS:Over1:3:SizeXLink.DOL ARGUS:ROI3:SizeX_RBV CP MS
+ARGUS:Over1:3:SizeX 1000000
+ARGUS:Over1:3:SizeYLink.DOL ARGUS:ROI3:SizeY_RBV CP MS
+ARGUS:Over1:3:SizeY 1000000
+ARGUS:Over1:3:DrawMode 0
+ARGUS:Over1:3:Shape 1
+ARGUS:Over1:3:Red 1
+ARGUS:Over1:3:Green 1
+ARGUS:Over1:3:Blue 1
+ARGUS:Over1:4:Name ROI4
+ARGUS:Over1:4:Use 0
+ARGUS:Over1:4:PositionXLink.DOL ARGUS:ROI4:MinX_RBV CP MS
+ARGUS:Over1:4:PositionX 0
+ARGUS:Over1:4:PositionYLink.DOL ARGUS:ROI4:MinY_RBV CP MS
+ARGUS:Over1:4:PositionY 0
+ARGUS:Over1:4:SizeXLink.DOL ARGUS:ROI4:SizeX_RBV CP MS
+ARGUS:Over1:4:SizeX 1000000
+ARGUS:Over1:4:SizeYLink.DOL ARGUS:ROI4:SizeY_RBV CP MS
+ARGUS:Over1:4:SizeY 1000000
+ARGUS:Over1:4:DrawMode 0
+ARGUS:Over1:4:Shape 1
+ARGUS:Over1:4:Red 1
+ARGUS:Over1:4:Green 1
+ARGUS:Over1:4:Blue 1
+ARGUS:Over1:5:Name Cursor1
+ARGUS:Over1:5:Use 0
+ARGUS:Over1:5:PositionXLink.DOL junk CP MS
+ARGUS:Over1:5:PositionX 1
+ARGUS:Over1:5:PositionYLink.DOL junk CP MS
+ARGUS:Over1:5:PositionY 1
+ARGUS:Over1:5:SizeXLink.DOL junk CP MS
+ARGUS:Over1:5:SizeX 1
+ARGUS:Over1:5:SizeYLink.DOL junk CP MS
+ARGUS:Over1:5:SizeY 1
+ARGUS:Over1:5:DrawMode 0
+ARGUS:Over1:5:Shape 1
+ARGUS:Over1:5:Red 1
+ARGUS:Over1:5:Green 1
+ARGUS:Over1:5:Blue 1
+ARGUS:Over1:6:Name Cursor2
+ARGUS:Over1:6:Use 0
+ARGUS:Over1:6:PositionXLink.DOL junk CP MS
+ARGUS:Over1:6:PositionX 1
+ARGUS:Over1:6:PositionYLink.DOL junk CP MS
+ARGUS:Over1:6:PositionY 1
+ARGUS:Over1:6:SizeXLink.DOL junk CP MS
+ARGUS:Over1:6:SizeX 1
+ARGUS:Over1:6:SizeYLink.DOL junk CP MS
+ARGUS:Over1:6:SizeY 1
+ARGUS:Over1:6:DrawMode 0
+ARGUS:Over1:6:Shape 1
+ARGUS:Over1:6:Red 1
+ARGUS:Over1:6:Green 1
+ARGUS:Over1:6:Blue 1
+ARGUS:Over1:7:Name Box1
+ARGUS:Over1:7:Use 0
+ARGUS:Over1:7:PositionXLink.DOL junk CP MS
+ARGUS:Over1:7:PositionX 1
+ARGUS:Over1:7:PositionYLink.DOL junk CP MS
+ARGUS:Over1:7:PositionY 1
+ARGUS:Over1:7:SizeXLink.DOL junk CP MS
+ARGUS:Over1:7:SizeX 1
+ARGUS:Over1:7:SizeYLink.DOL junk CP MS
+ARGUS:Over1:7:SizeY 1
+ARGUS:Over1:7:DrawMode 0
+ARGUS:Over1:7:Shape 1
+ARGUS:Over1:7:Red 1
+ARGUS:Over1:7:Green 1
+ARGUS:Over1:7:Blue 1
+ARGUS:Over1:8:Name Box2
+ARGUS:Over1:8:Use 0
+ARGUS:Over1:8:PositionXLink.DOL junk CP MS
+ARGUS:Over1:8:PositionX 1
+ARGUS:Over1:8:PositionYLink.DOL junk CP MS
+ARGUS:Over1:8:PositionY 1
+ARGUS:Over1:8:SizeXLink.DOL junk CP MS
+ARGUS:Over1:8:SizeX 1
+ARGUS:Over1:8:SizeYLink.DOL junk CP MS
+ARGUS:Over1:8:SizeY 1
+ARGUS:Over1:8:DrawMode 0
+ARGUS:Over1:8:Shape 1
+ARGUS:Over1:8:Red 1
+ARGUS:Over1:8:Green 1
+ARGUS:Over1:8:Blue 1
+ARGUS:CC1:NDArrayPort argusTel
+ARGUS:CC1:NDArrayAddress 0
+ARGUS:CC1:EnableCallbacks 0
+ARGUS:CC1:MinCallbackTime 0
+ARGUS:CC1:BlockingCallbacks 0
+ARGUS:CC1:NDAttributesFile 
+ARGUS:CC1:ColorModeOut 0
+ARGUS:CC2:NDArrayPort argusTel
+ARGUS:CC2:NDArrayAddress 0
+ARGUS:CC2:EnableCallbacks 0
+ARGUS:CC2:MinCallbackTime 0
+ARGUS:CC2:BlockingCallbacks 0
+ARGUS:CC2:NDAttributesFile 
+ARGUS:CC2:ColorModeOut 0
+ARGUS:scan1.ATIME 0
+ARGUS:scan1.COPYTO 0
+ARGUS:scan1.FLNK 0
+ARGUS:scan1.NPTS 10
+ARGUS:scan1.ACQT 0
+ARGUS:scan1.ACQM 0
+ARGUS:scan1.PASM 0
+ARGUS:scan1.BSPV 
+ARGUS:scan1.BSCD 1
+ARGUS:scan1.BSWAIT 0
+ARGUS:scan1.ASPV 
+ARGUS:scan1.ASCD 1
+ARGUS:scan1.ASWAIT 0
+ARGUS:scan1.T1PV 
+ARGUS:scan1.T1CD 1
+ARGUS:scan1.T2PV 
+ARGUS:scan1.T2CD 1
+ARGUS:scan1.T3PV 
+ARGUS:scan1.T3CD 1
+ARGUS:scan1.T4PV 
+ARGUS:scan1.T4CD 1
+ARGUS:scan1.P1PV 
+ARGUS:scan1.R1PV 
+ARGUS:scan1.P1SM 0
+ARGUS:scan1.P1SP 0
+ARGUS:scan1.P1EP 0
+ARGUS:scan1.P1AR 0
+ARGUS:scan1.P2PV 
+ARGUS:scan1.R2PV 
+ARGUS:scan1.P2SM 0
+ARGUS:scan1.P2SP 0
+ARGUS:scan1.P2EP 0
+ARGUS:scan1.P2AR 0
+ARGUS:scan1.P3PV 
+ARGUS:scan1.R3PV 
+ARGUS:scan1.P3SM 0
+ARGUS:scan1.P3SP 0
+ARGUS:scan1.P3EP 0
+ARGUS:scan1.P3AR 0
+ARGUS:scan1.P4PV 
+ARGUS:scan1.R4PV 
+ARGUS:scan1.P4SM 0
+ARGUS:scan1.P4SP 0
+ARGUS:scan1.P4EP 0
+ARGUS:scan1.P4AR 0
+ARGUS:scan1.PDLY 0
+ARGUS:scan1.DDLY 0
+ARGUS:scan1.REFD 1
+ARGUS:scan1.AWCT 0
+ARGUS:scan1.A1PV 
+ARGUS:scan1.A1CD 1
+ARGUS:scan1.D01PV 
+ARGUS:scan1.D02PV 
+ARGUS:scan1.D03PV 
+ARGUS:scan1.D04PV 
+ARGUS:scan1.D05PV 
+ARGUS:scan1.D06PV 
+ARGUS:scan1.D07PV 
+ARGUS:scan1.D08PV 
+ARGUS:scan1.D09PV 
+ARGUS:scan1.D10PV 
+ARGUS:scan1.D11PV 
+ARGUS:scan1.D12PV 
+ARGUS:scan1.D13PV 
+ARGUS:scan1.D14PV 
+ARGUS:scan1.D15PV 
+ARGUS:scan1.D16PV 
+ARGUS:scan1.D17PV 
+ARGUS:scan1.D18PV 
+ARGUS:scan1.D19PV 
+ARGUS:scan1.D20PV 
+ARGUS:scan1.D21PV 
+ARGUS:scan1.D22PV 
+ARGUS:scan1.D23PV 
+ARGUS:scan1.D24PV 
+ARGUS:scan1.D25PV 
+ARGUS:scan1.D26PV 
+ARGUS:scan1.D27PV 
+ARGUS:scan1.D28PV 
+ARGUS:scan1.D29PV 
+ARGUS:scan1.D30PV 
+ARGUS:scan1.D31PV 
+ARGUS:scan1.D32PV 
+ARGUS:scan1.D33PV 
+ARGUS:scan1.D34PV 
+ARGUS:scan1.D35PV 
+ARGUS:scan1.D36PV 
+ARGUS:scan1.D37PV 
+ARGUS:scan1.D38PV 
+ARGUS:scan1.D39PV 
+ARGUS:scan1.D40PV 
+ARGUS:scan1.D41PV 
+ARGUS:scan1.D42PV 
+ARGUS:scan1.D43PV 
+ARGUS:scan1.D44PV 
+ARGUS:scan1.D45PV 
+ARGUS:scan1.D46PV 
+ARGUS:scan1.D47PV 
+ARGUS:scan1.D48PV 
+ARGUS:scan1.D49PV 
+ARGUS:scan1.D50PV 
+ARGUS:scan1.D51PV 
+ARGUS:scan1.D52PV 
+ARGUS:scan1.D53PV 
+ARGUS:scan1.D54PV 
+ARGUS:scan1.D55PV 
+ARGUS:scan1.D56PV 
+ARGUS:scan1.D57PV 
+ARGUS:scan1.D58PV 
+ARGUS:scan1.D59PV 
+ARGUS:scan1.D60PV 
+ARGUS:scan1.D61PV 
+ARGUS:scan1.D62PV 
+ARGUS:scan1.D63PV 
+ARGUS:scan1.D64PV 
+ARGUS:scan1.D65PV 
+ARGUS:scan1.D66PV 
+ARGUS:scan1.D67PV 
+ARGUS:scan1.D68PV 
+ARGUS:scan1.D69PV 
+ARGUS:scan1.D70PV 
+ARGUS:scan2.ATIME 0
+ARGUS:scan2.COPYTO 0
+ARGUS:scan2.FLNK 0
+ARGUS:scan2.NPTS 10
+ARGUS:scan2.ACQT 0
+ARGUS:scan2.ACQM 0
+ARGUS:scan2.PASM 0
+ARGUS:scan2.BSPV 
+ARGUS:scan2.BSCD 1
+ARGUS:scan2.BSWAIT 0
+ARGUS:scan2.ASPV 
+ARGUS:scan2.ASCD 1
+ARGUS:scan2.ASWAIT 0
+ARGUS:scan2.T1PV ARGUS:scan1.EXSC
+ARGUS:scan2.T1CD 1
+ARGUS:scan2.T2PV 
+ARGUS:scan2.T2CD 1
+ARGUS:scan2.T3PV 
+ARGUS:scan2.T3CD 1
+ARGUS:scan2.T4PV 
+ARGUS:scan2.T4CD 1
+ARGUS:scan2.P1PV 
+ARGUS:scan2.R1PV 
+ARGUS:scan2.P1SM 0
+ARGUS:scan2.P1SP 0
+ARGUS:scan2.P1EP 0
+ARGUS:scan2.P1AR 0
+ARGUS:scan2.P2PV 
+ARGUS:scan2.R2PV 
+ARGUS:scan2.P2SM 0
+ARGUS:scan2.P2SP 0
+ARGUS:scan2.P2EP 0
+ARGUS:scan2.P2AR 0
+ARGUS:scan2.P3PV 
+ARGUS:scan2.R3PV 
+ARGUS:scan2.P3SM 0
+ARGUS:scan2.P3SP 0
+ARGUS:scan2.P3EP 0
+ARGUS:scan2.P3AR 0
+ARGUS:scan2.P4PV 
+ARGUS:scan2.R4PV 
+ARGUS:scan2.P4SM 0
+ARGUS:scan2.P4SP 0
+ARGUS:scan2.P4EP 0
+ARGUS:scan2.P4AR 0
+ARGUS:scan2.PDLY 0
+ARGUS:scan2.DDLY 0
+ARGUS:scan2.REFD 1
+ARGUS:scan2.AWCT 0
+ARGUS:scan2.A1PV 
+ARGUS:scan2.A1CD 1
+ARGUS:scan2.D01PV 
+ARGUS:scan2.D02PV 
+ARGUS:scan2.D03PV 
+ARGUS:scan2.D04PV 
+ARGUS:scan2.D05PV 
+ARGUS:scan2.D06PV 
+ARGUS:scan2.D07PV 
+ARGUS:scan2.D08PV 
+ARGUS:scan2.D09PV 
+ARGUS:scan2.D10PV 
+ARGUS:scan2.D11PV 
+ARGUS:scan2.D12PV 
+ARGUS:scan2.D13PV 
+ARGUS:scan2.D14PV 
+ARGUS:scan2.D15PV 
+ARGUS:scan2.D16PV 
+ARGUS:scan2.D17PV 
+ARGUS:scan2.D18PV 
+ARGUS:scan2.D19PV 
+ARGUS:scan2.D20PV 
+ARGUS:scan2.D21PV 
+ARGUS:scan2.D22PV 
+ARGUS:scan2.D23PV 
+ARGUS:scan2.D24PV 
+ARGUS:scan2.D25PV 
+ARGUS:scan2.D26PV 
+ARGUS:scan2.D27PV 
+ARGUS:scan2.D28PV 
+ARGUS:scan2.D29PV 
+ARGUS:scan2.D30PV 
+ARGUS:scan2.D31PV 
+ARGUS:scan2.D32PV 
+ARGUS:scan2.D33PV 
+ARGUS:scan2.D34PV 
+ARGUS:scan2.D35PV 
+ARGUS:scan2.D36PV 
+ARGUS:scan2.D37PV 
+ARGUS:scan2.D38PV 
+ARGUS:scan2.D39PV 
+ARGUS:scan2.D40PV 
+ARGUS:scan2.D41PV 
+ARGUS:scan2.D42PV 
+ARGUS:scan2.D43PV 
+ARGUS:scan2.D44PV 
+ARGUS:scan2.D45PV 
+ARGUS:scan2.D46PV 
+ARGUS:scan2.D47PV 
+ARGUS:scan2.D48PV 
+ARGUS:scan2.D49PV 
+ARGUS:scan2.D50PV 
+ARGUS:scan2.D51PV 
+ARGUS:scan2.D52PV 
+ARGUS:scan2.D53PV 
+ARGUS:scan2.D54PV 
+ARGUS:scan2.D55PV 
+ARGUS:scan2.D56PV 
+ARGUS:scan2.D57PV 
+ARGUS:scan2.D58PV 
+ARGUS:scan2.D59PV 
+ARGUS:scan2.D60PV 
+ARGUS:scan2.D61PV 
+ARGUS:scan2.D62PV 
+ARGUS:scan2.D63PV 
+ARGUS:scan2.D64PV 
+ARGUS:scan2.D65PV 
+ARGUS:scan2.D66PV 
+ARGUS:scan2.D67PV 
+ARGUS:scan2.D68PV 
+ARGUS:scan2.D69PV 
+ARGUS:scan2.D70PV 
+ARGUS:scan3.ATIME 0
+ARGUS:scan3.COPYTO 0
+ARGUS:scan3.FLNK 0
+ARGUS:scan3.NPTS 10
+ARGUS:scan3.ACQT 0
+ARGUS:scan3.ACQM 0
+ARGUS:scan3.PASM 0
+ARGUS:scan3.BSPV 
+ARGUS:scan3.BSCD 1
+ARGUS:scan3.BSWAIT 0
+ARGUS:scan3.ASPV 
+ARGUS:scan3.ASCD 1
+ARGUS:scan3.ASWAIT 0
+ARGUS:scan3.T1PV ARGUS:scan2.EXSC
+ARGUS:scan3.T1CD 1
+ARGUS:scan3.T2PV 
+ARGUS:scan3.T2CD 1
+ARGUS:scan3.T3PV 
+ARGUS:scan3.T3CD 1
+ARGUS:scan3.T4PV 
+ARGUS:scan3.T4CD 1
+ARGUS:scan3.P1PV 
+ARGUS:scan3.R1PV 
+ARGUS:scan3.P1SM 0
+ARGUS:scan3.P1SP 0
+ARGUS:scan3.P1EP 0
+ARGUS:scan3.P1AR 0
+ARGUS:scan3.P2PV 
+ARGUS:scan3.R2PV 
+ARGUS:scan3.P2SM 0
+ARGUS:scan3.P2SP 0
+ARGUS:scan3.P2EP 0
+ARGUS:scan3.P2AR 0
+ARGUS:scan3.P3PV 
+ARGUS:scan3.R3PV 
+ARGUS:scan3.P3SM 0
+ARGUS:scan3.P3SP 0
+ARGUS:scan3.P3EP 0
+ARGUS:scan3.P3AR 0
+ARGUS:scan3.P4PV 
+ARGUS:scan3.R4PV 
+ARGUS:scan3.P4SM 0
+ARGUS:scan3.P4SP 0
+ARGUS:scan3.P4EP 0
+ARGUS:scan3.P4AR 0
+ARGUS:scan3.PDLY 0
+ARGUS:scan3.DDLY 0
+ARGUS:scan3.REFD 1
+ARGUS:scan3.AWCT 0
+ARGUS:scan3.A1PV 
+ARGUS:scan3.A1CD 1
+ARGUS:scan3.D01PV 
+ARGUS:scan3.D02PV 
+ARGUS:scan3.D03PV 
+ARGUS:scan3.D04PV 
+ARGUS:scan3.D05PV 
+ARGUS:scan3.D06PV 
+ARGUS:scan3.D07PV 
+ARGUS:scan3.D08PV 
+ARGUS:scan3.D09PV 
+ARGUS:scan3.D10PV 
+ARGUS:scan3.D11PV 
+ARGUS:scan3.D12PV 
+ARGUS:scan3.D13PV 
+ARGUS:scan3.D14PV 
+ARGUS:scan3.D15PV 
+ARGUS:scan3.D16PV 
+ARGUS:scan3.D17PV 
+ARGUS:scan3.D18PV 
+ARGUS:scan3.D19PV 
+ARGUS:scan3.D20PV 
+ARGUS:scan3.D21PV 
+ARGUS:scan3.D22PV 
+ARGUS:scan3.D23PV 
+ARGUS:scan3.D24PV 
+ARGUS:scan3.D25PV 
+ARGUS:scan3.D26PV 
+ARGUS:scan3.D27PV 
+ARGUS:scan3.D28PV 
+ARGUS:scan3.D29PV 
+ARGUS:scan3.D30PV 
+ARGUS:scan3.D31PV 
+ARGUS:scan3.D32PV 
+ARGUS:scan3.D33PV 
+ARGUS:scan3.D34PV 
+ARGUS:scan3.D35PV 
+ARGUS:scan3.D36PV 
+ARGUS:scan3.D37PV 
+ARGUS:scan3.D38PV 
+ARGUS:scan3.D39PV 
+ARGUS:scan3.D40PV 
+ARGUS:scan3.D41PV 
+ARGUS:scan3.D42PV 
+ARGUS:scan3.D43PV 
+ARGUS:scan3.D44PV 
+ARGUS:scan3.D45PV 
+ARGUS:scan3.D46PV 
+ARGUS:scan3.D47PV 
+ARGUS:scan3.D48PV 
+ARGUS:scan3.D49PV 
+ARGUS:scan3.D50PV 
+ARGUS:scan3.D51PV 
+ARGUS:scan3.D52PV 
+ARGUS:scan3.D53PV 
+ARGUS:scan3.D54PV 
+ARGUS:scan3.D55PV 
+ARGUS:scan3.D56PV 
+ARGUS:scan3.D57PV 
+ARGUS:scan3.D58PV 
+ARGUS:scan3.D59PV 
+ARGUS:scan3.D60PV 
+ARGUS:scan3.D61PV 
+ARGUS:scan3.D62PV 
+ARGUS:scan3.D63PV 
+ARGUS:scan3.D64PV 
+ARGUS:scan3.D65PV 
+ARGUS:scan3.D66PV 
+ARGUS:scan3.D67PV 
+ARGUS:scan3.D68PV 
+ARGUS:scan3.D69PV 
+ARGUS:scan3.D70PV 
+ARGUS:scan4.ATIME 0
+ARGUS:scan4.COPYTO 0
+ARGUS:scan4.FLNK 0
+ARGUS:scan4.NPTS 10
+ARGUS:scan4.ACQT 0
+ARGUS:scan4.ACQM 0
+ARGUS:scan4.PASM 0
+ARGUS:scan4.BSPV 
+ARGUS:scan4.BSCD 1
+ARGUS:scan4.BSWAIT 0
+ARGUS:scan4.ASPV 
+ARGUS:scan4.ASCD 1
+ARGUS:scan4.ASWAIT 0
+ARGUS:scan4.T1PV ARGUS:scan3.EXSC
+ARGUS:scan4.T1CD 1
+ARGUS:scan4.T2PV 
+ARGUS:scan4.T2CD 1
+ARGUS:scan4.T3PV 
+ARGUS:scan4.T3CD 1
+ARGUS:scan4.T4PV 
+ARGUS:scan4.T4CD 1
+ARGUS:scan4.P1PV 
+ARGUS:scan4.R1PV 
+ARGUS:scan4.P1SM 0
+ARGUS:scan4.P1SP 0
+ARGUS:scan4.P1EP 0
+ARGUS:scan4.P1AR 0
+ARGUS:scan4.P2PV 
+ARGUS:scan4.R2PV 
+ARGUS:scan4.P2SM 0
+ARGUS:scan4.P2SP 0
+ARGUS:scan4.P2EP 0
+ARGUS:scan4.P2AR 0
+ARGUS:scan4.P3PV 
+ARGUS:scan4.R3PV 
+ARGUS:scan4.P3SM 0
+ARGUS:scan4.P3SP 0
+ARGUS:scan4.P3EP 0
+ARGUS:scan4.P3AR 0
+ARGUS:scan4.P4PV 
+ARGUS:scan4.R4PV 
+ARGUS:scan4.P4SM 0
+ARGUS:scan4.P4SP 0
+ARGUS:scan4.P4EP 0
+ARGUS:scan4.P4AR 0
+ARGUS:scan4.PDLY 0
+ARGUS:scan4.DDLY 0
+ARGUS:scan4.REFD 1
+ARGUS:scan4.AWCT 0
+ARGUS:scan4.A1PV 
+ARGUS:scan4.A1CD 1
+ARGUS:scan4.D01PV 
+ARGUS:scan4.D02PV 
+ARGUS:scan4.D03PV 
+ARGUS:scan4.D04PV 
+ARGUS:scan4.D05PV 
+ARGUS:scan4.D06PV 
+ARGUS:scan4.D07PV 
+ARGUS:scan4.D08PV 
+ARGUS:scan4.D09PV 
+ARGUS:scan4.D10PV 
+ARGUS:scan4.D11PV 
+ARGUS:scan4.D12PV 
+ARGUS:scan4.D13PV 
+ARGUS:scan4.D14PV 
+ARGUS:scan4.D15PV 
+ARGUS:scan4.D16PV 
+ARGUS:scan4.D17PV 
+ARGUS:scan4.D18PV 
+ARGUS:scan4.D19PV 
+ARGUS:scan4.D20PV 
+ARGUS:scan4.D21PV 
+ARGUS:scan4.D22PV 
+ARGUS:scan4.D23PV 
+ARGUS:scan4.D24PV 
+ARGUS:scan4.D25PV 
+ARGUS:scan4.D26PV 
+ARGUS:scan4.D27PV 
+ARGUS:scan4.D28PV 
+ARGUS:scan4.D29PV 
+ARGUS:scan4.D30PV 
+ARGUS:scan4.D31PV 
+ARGUS:scan4.D32PV 
+ARGUS:scan4.D33PV 
+ARGUS:scan4.D34PV 
+ARGUS:scan4.D35PV 
+ARGUS:scan4.D36PV 
+ARGUS:scan4.D37PV 
+ARGUS:scan4.D38PV 
+ARGUS:scan4.D39PV 
+ARGUS:scan4.D40PV 
+ARGUS:scan4.D41PV 
+ARGUS:scan4.D42PV 
+ARGUS:scan4.D43PV 
+ARGUS:scan4.D44PV 
+ARGUS:scan4.D45PV 
+ARGUS:scan4.D46PV 
+ARGUS:scan4.D47PV 
+ARGUS:scan4.D48PV 
+ARGUS:scan4.D49PV 
+ARGUS:scan4.D50PV 
+ARGUS:scan4.D51PV 
+ARGUS:scan4.D52PV 
+ARGUS:scan4.D53PV 
+ARGUS:scan4.D54PV 
+ARGUS:scan4.D55PV 
+ARGUS:scan4.D56PV 
+ARGUS:scan4.D57PV 
+ARGUS:scan4.D58PV 
+ARGUS:scan4.D59PV 
+ARGUS:scan4.D60PV 
+ARGUS:scan4.D61PV 
+ARGUS:scan4.D62PV 
+ARGUS:scan4.D63PV 
+ARGUS:scan4.D64PV 
+ARGUS:scan4.D65PV 
+ARGUS:scan4.D66PV 
+ARGUS:scan4.D67PV 
+ARGUS:scan4.D68PV 
+ARGUS:scan4.D69PV 
+ARGUS:scan4.D70PV 
+<END>

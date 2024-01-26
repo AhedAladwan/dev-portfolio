@@ -1,0 +1,99 @@
+# Database for the records specific for the Argus detector
+# Ahed Aladwan
+# 12.12.2012
+
+###############################################################################
+#  Note: The following are records defined in ADBase.template.                #
+#        We are changing some of the fields here to reflect valid values for  #
+#        Prosilica                                                            #
+###############################################################################
+
+###############################################################################
+#  These records control the trigger mode.                                    # 
+###############################################################################
+record(mbbo, "$(P)$(R)TriggerMode")
+{
+   field(ZRST, "TDI External")
+   field(ZRVL, "0")
+   field(ONST, "TDI Internal")
+   field(ONVL, "1")
+   field(TWST, "Area Internal")
+   field(TWVL, "2")
+ }
+
+record(mbbi, "$(P)$(R)TriggerMode_RBV")
+{
+   field(ZRST, "TDI External")
+   field(ZRVL, "0")
+   field(ONST, "TDI Internal")
+   field(ONVL, "1")
+   field(TWST, "Area Internal")
+   field(TWVL, "2")
+   field(SCAN, "I/O Intr")
+}
+
+record(mbbo, "$(P)$(R)ActiveSignal")
+{
+   field(PINI, "YES")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ARGUS_ACTIVE_SIGNAL")
+   field(ZRST, "Enabled")
+   field(ZRVL, "0")
+   field(ONST, "Disabled")
+   field(ONVL, "1")
+ }
+
+record(mbbi, "$(P)$(R)ActiveSignal_RBV")
+{
+   field(DTYP, "asynInt32")
+   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ARGUS_ACTIVE_SIGNAL")
+   field(ZRST, "Enabled")
+   field(ZRVL, "0")
+   field(ONST, "Disabled")
+   field(ONVL, "1")
+   field(SCAN, "I/O Intr")
+}
+
+record(ao, "$(P)$(R)Temperature")
+{
+   field(SCAN, "10 second")
+}
+
+record(longout, "$(P)$(R)Offset")
+{
+   field(PINI, "YES")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ARGUS_OFFSET_ALL")
+   field(VAL,  "23")
+}
+
+record(longin, "$(P)$(R)Offset_RBV")
+{
+   field(DTYP, "asynInt32")
+   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ARGUS_OFFSET_ALL")
+   field(SCAN, "I/O Intr")
+}
+
+record(longout, "$(P)$(R)LineRate")
+{
+   field(PINI, "YES")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ARGUS_LINERATE")
+   field(VAL,  "2000")
+}
+
+record(longin, "$(P)$(R)LineRate_RBV")
+{
+   field(DTYP, "asynInt32")
+   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ARGUS_LINERATE")
+   field(SCAN, "I/O Intr")
+}
+
+
+record(busy, "$(P)$(R)Restor")
+{
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))ARGUS_RESTOR")
+   field(ZNAM, "Restor")
+   field(ONAM, "Restor")
+}

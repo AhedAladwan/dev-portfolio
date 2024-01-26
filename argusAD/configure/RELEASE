@@ -1,0 +1,52 @@
+# RELEASE - Location of external support modules
+#
+# IF YOU MAKE ANY CHANGES to this file you must subsequently
+# do a "gnumake rebuild" in this application's top level
+# directory.
+#
+# The build process does not check dependencies against files
+# that are outside this application, thus you should do a
+# "gnumake rebuild" in the top level directory after EPICS_BASE
+# or any other external module pointed to below is rebuilt.
+#
+# Host- or target-specific settings can be given in files named
+#  RELEASE.$(EPICS_HOST_ARCH).Common
+#  RELEASE.Common.$(T_A)
+#  RELEASE.$(EPICS_HOST_ARCH).$(T_A)
+#
+# This file should ONLY define paths to other support modules,
+# or include statements that pull in similar RELEASE files.
+# Build settings that are NOT module paths should appear in a
+# CONFIG_SITE file.
+
+TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+
+SUPPORT=C:\beamline\perforce\Dev\SBS\4_Controls\4_3_Network_Infrastructure\4_3_1_Comms_Common_Services\sw\epics
+
+# ASYN is needed for base classes 
+ASYN=$(SUPPORT)\asyn-4-20
+
+# CALC is needed for scalcout record that SSCAN uses
+CALC=$(SUPPORT)\calc-3-0
+
+# BUSY is needed for busy record
+BUSY=$(SUPPORT)\busy-1-4
+
+# SSCAN is needed for scanning threshold on Pilatus and general scanning
+SSCAN=$(SUPPORT)\sscan-2-8-1
+
+#AUTOSAVE is needed for save_restore
+AUTOSAVE=$(SUPPORT)\autosave-5-0
+
+AREA_DETECTOR=$(SUPPORT)\areaDetectorR1-8-AS
+
+# If using the sequencer, point SNCSEQ at its top directory:
+#SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
+
+# EPICS_BASE usually appears last so other apps can override stuff:
+EPICS_BASE=$(SUPPORT)\base-3-14-12-2
+
+# Set RULES here if you want to take build rules from somewhere
+# other than EPICS_BASE:
+#RULES=/path/to/epics/support/module/rules/x-y
+
